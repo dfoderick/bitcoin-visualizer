@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## bitcoin visualizer
 
 You can use the [editor on GitHub](https://github.com/dfoderick/bitcoin-visualizer/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
