@@ -20,14 +20,14 @@
     <!-- Icons-->
     <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
     <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
-    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script> -->
-    <script src='https://unpkg.com/bsv'></script>
+    <script src='https://unpkg.com/bsv@0.24.3/bsv.min.js'></script>
     <script>
 
       // window.dataLayer = window.dataLayer || [];
@@ -122,27 +122,29 @@
                     <div class="card">
                       <div class="card-header"><i class="fa fa-unlock fa-lg mt-4"></i>Unlock Script (aka ScriptSig from Transaction Input vin)</div>
                       <div class="card-body">
-                        <textarea id="txtUnlock">OP_3</textarea>
+                        <textarea id="txtUnlock" class="colspan=12 w-100">OP_1 OP_2 OP_MUL</textarea>
                       </div>
                     </div>
 
                     <div class="card">
                       <div class="card-header"><i class="fa fa-lock fa-lg mt-4"></i>Locking Script (aka ScriptPubKey from Transaction Output vout)</div>
                       <div class="card-body">
-                        <textarea id="txtLock">OP_1 OP_2 OP_ADD OP_EQUAL</textarea>
+                        <textarea id="txtLock" class="colspan=12 w-100">OP_2 OP_EQUAL</textarea>
                       </div>
                     </div>
 
-                    <div>
-                    <button id="scriptRun">Run Script</button>
+                    <div class="pb-3">
+                      <button id="scriptRun">Run Script</button>
                     </div>
 
                     <div class="card">
-                        <div class="card-header">Results</div>
-                        <div class="card-body">
-                          <label type="text" id="txtResults"></label>
-                        </div>
+                      <div class="card-header">
+                        <span class="pr-3">Results</span>
+                        <span class="pr-3" id="results-icon"></span>
+                        <label type="text" id="txtResults"></label>
                       </div>
+                      <div id="debugger"></div>
+                    </div>
   
                   </div>
                 </div>
@@ -165,7 +167,9 @@
       </div>
     </footer>
     <!-- CoreUI and necessary plugins-->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/pace-progress/pace.min.js"></script>
@@ -179,17 +183,54 @@
     <script>
       document.addEventListener("DOMContentLoaded", function(e) {
         $('#scriptRun').click( (clk) => {
-          const unlock = $('#txtUnlock').val()
-          console.log(unlock)
-          const sunlock = bsv.Script(unlock)
-          const lock = $('#txtLock').val()
-          const slock = bsv.Script(lock)
-          console.log(slock)
-          const si = bsv.Script.Interpreter()
-          const verified = si.verify(sunlock, slock)
-          $('#txtResults').text(verified)
+          initRun()
+          try {
+            const unlock = $('#txtUnlock').val()
+            const sunlock = bsv.Script(unlock)
+            const lock = $('#txtLock').val()
+            const slock = bsv.Script(lock)
+            const si = bsv.Script.Interpreter()
+            si.stepListener = function (step, stack, altstack) {
+              showStep(step, stack, altstack)
+            }
+            //function (scriptSig, scriptPubkey, tx, nin, flags, satoshisBN)
+            const verified = si.verify(sunlock, slock, null, null, bsv.Script.Interpreter.SCRIPT_VERIFY_P2SH |
+              bsv.Script.Interpreter.SCRIPT_ENABLE_MAGNETIC_OPCODES | bsv.Script.Interpreter.SCRIPT_ENABLE_MONOLITH_OPCODES)
+            showResults({si: si, verified: verified, error: si.errstr})
+          }
+          catch (err) {
+            showResults({si: null, verified: false, error: err})
+          }
         })
       })
+
+      function initRun() {
+        $('#txtResults').text('')
+        $('#results-icon').empty()
+        $('#debugger').empty()
+      }
+
+      function showResults(results) {
+        $('#results-icon').empty()
+        if (results.verified) {
+          $('#results-icon').append(`<i class="fa fa-thumbs-up fa-lg mt-4" style="color:green"></i>`)
+        } else {
+          $('#results-icon').append(`<i class="fa fa-thumbs-down fa-lg mt-4" style="color:red"></i>`)
+        }
+        $('#txtResults').text(`${results.verified} ${results.error}`)
+      }
+
+      function showStep(step, stack, altstack) {
+        const script = (new bsv.Script()).add(step.opcode)
+        let stackTop = '>'
+        for (let item in stack.reverse()) {
+          const stepDescription = `Step ${step.pc}: ${script}:${stackTop}${stack[item].toString('hex')}`
+          $('#debugger').append(`<div class="card-body">
+            <label type="text">${stepDescription}</label>
+          </div>`);
+          stackTop = ' '
+        }
+      }
     
     </script>
 
