@@ -25,21 +25,14 @@
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics-->
-    <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script> -->
+    <style>
+      .grid-striped .row:nth-of-type(odd) {
+          background-color: rgba(0,0,0,.05);
+      }
+    </style>
+
     <script src='https://unpkg.com/bsv@0.24.3/bsv.min.js'></script>
     <script>
-
-      // window.dataLayer = window.dataLayer || [];
-
-      // function gtag() {
-      //   dataLayer.push(arguments);
-      // }
-      // gtag('js', new Date());
-      // // Shared ID
-      // gtag('config', 'UA-118965717-3');
-      // // Bootstrap ID
-      // gtag('config', 'UA-118965717-5');
 
     </script>
   </head>
@@ -143,8 +136,16 @@
                         <span class="pr-3" id="results-icon"></span>
                         <label type="text" id="txtResults"></label>
                       </div>
-                      <div id="debugger"></div>
-                    </div>
+                      <div class="card-body grid-striped">
+                        <div class="row">
+                          <span class="col-md-3">Step</span>
+                          <span class="col-md-3">Instruction</span>
+                          <span class="col-md-3">Main Stack</span>
+                          <span class="col-md-3">Alt Stack</span>
+                        </div>
+                        <div id="debugger"></div>
+                      </div>
+                  </div>
   
                   </div>
                 </div>
@@ -222,14 +223,23 @@
 
       function showStep(step, stack, altstack) {
         const script = (new bsv.Script()).add(step.opcode)
+        $('#debugger').append(`<div class="row">
+            <span class="col-md-3">Step ${step.pc}</span>
+            <span class="col-md-3">${script}</span>
+            <span class="col-md-3">${renderStack(stack)}</span>
+            <span class="col-md-3">${renderStack(altstack)}</span>
+          </div>`
+        );
+      }
+
+      function renderStack(stack) {
         let stackTop = '>'
+        let renderStack = ''
         for (let item in stack.reverse()) {
-          const stepDescription = `Step ${step.pc}: ${script}:${stackTop}${stack[item].toString('hex')}`
-          $('#debugger').append(`<div class="card-body">
-            <label type="text">${stepDescription}</label>
-          </div>`);
+          renderStack+=`<div>${stackTop}${stack[item].toString('hex')}</div>`
           stackTop = ' '
         }
+        return renderStack
       }
     
     </script>
