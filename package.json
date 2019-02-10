@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/dfoderick/bitcoin-visualizer/issues"
   },
-  "homepage": "https://github.com/dfoderick/bitcoin-visualizer#readme",
+  "homepage": "https://github.com/dfoderick/bitcoin-visualizer",
   "scripts": {
     "build": "npm-run-all build-clean build-copy build-vendors",
     "build-clean": "rimraf dist",
