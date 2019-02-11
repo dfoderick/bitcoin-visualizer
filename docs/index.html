@@ -116,6 +116,7 @@
         </ol>
         <div class="container-fluid">
           <div class="animated fadeIn">
+
             <!-- /.row-->
             <div class="row">
               <div class="col-md-12">
@@ -123,7 +124,17 @@
                   <div class="card-header">Script Visualizer</div>
                   <div class="card-body">
                     <!-- /.row-->
-                    
+
+                    <div class="card">
+                      <div class="card-header"><i class="fa fa-file-download fa-lg mt-4"></i>Load Transaction</div>
+                      <div class="card-body">
+                        <input type="text" id="txtTxid" class="col-md-8"
+                        placeholder="Enter TxId"
+                        ></input>
+                        <button id="btnLoadTx">Load Tx</button>
+                      </div>
+                    </div>
+  
                     <div class="card">
                       <div class="card-header"><i class="fa fa-unlock fa-lg mt-4"></i>Unlock Script (aka ScriptSig from Transaction Input vin)</div>
                       <div class="card-body">
@@ -195,7 +206,42 @@
     <script>
       document.addEventListener("DOMContentLoaded", function(e) {
         $('#scriptRun').click( (clk) => {
-          initRun()
+          runScript()
+        })
+
+        $('#btnLoadTx').click( (clk) => {
+          let txid = $('#txtTxid').val()
+          if (txid) {
+            rawtx(txid).then( unlockingTx => {
+              let utx = unlockingTx.data
+              console.log(utx)
+              let selectedVin = utx.vin[0]
+              console.log(selectedVin)
+              $('#txtUnlock').val(selectedVin.scriptSig.asm)
+              rawtx(selectedVin.txid).then( lockingTx => {
+                $('#txtLock').val(lockingTx.data.vout[selectedVin.vout].scriptPubKey.asm)
+                runScript()
+              })
+            })
+          }
+        })
+      })
+
+      const rawtx = async (tx) => {
+        if (!tx) {
+          console.log("nothing passed to rawtx!")
+          return
+        } else {
+          const url = `https://api.bitindex.network/api/v2/tx/${tx}`
+          console.log(url)
+          const u = await fetch(url)
+          let data = await u.json()
+          return data
+        }
+      }
+
+      function runScript() {
+        initRun()
           try {
             const unlock = $('#txtUnlock').val()
             const sunlock = bsv.Script(unlock)
@@ -213,8 +259,7 @@
           catch (err) {
             showResults({si: null, verified: false, error: err})
           }
-        })
-      })
+      }
 
       function initRun() {
         $('#txtResults').text('')
