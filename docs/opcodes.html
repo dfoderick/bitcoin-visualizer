@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.1.11
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>CoreUI Free Bootstrap Admin Template</title>
+    <!-- Icons-->
+    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script> -->
+    <script>
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag() {
+      //   dataLayer.push(arguments);
+      // }
+      // gtag('js', new Date());
+      // // Shared ID
+      // gtag('config', 'UA-118965717-3');
+      // // Bootstrap ID
+      // gtag('config', 'UA-118965717-5');
+    </script>
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
+        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
+      </a> -->
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <!-- <li class="nav-item px-3">
+          <a class="nav-link" href="#">Users</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Settings</a>
+        </li> -->
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <!-- <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-bell"></i>
+            <span class="badge badge-pill badge-danger">5</span>
+          </a>
+        </li>
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-list"></i>
+          </a>
+        </li>
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-location-pin"></i>
+          </a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <!-- <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+          </a> -->
+          <div class="dropdown-menu dropdown-menu-right">
+            <!-- <div class="dropdown-header text-center">
+              <strong>Account</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-bell-o"></i> Updates
+              <span class="badge badge-info">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-envelope-o"></i> Messages
+              <span class="badge badge-success">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-tasks"></i> Tasks
+              <span class="badge badge-danger">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-comments"></i> Comments
+              <span class="badge badge-warning">42</span>
+            </a> -->
+            <!-- <div class="dropdown-header text-center">
+              <strong>Settings</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-wrench"></i> Settings</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-usd"></i> Payments
+              <span class="badge badge-secondary">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-file"></i> Projects
+              <span class="badge badge-primary">42</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-shield"></i> Lock Account</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-lock"></i> Logout</a>
+          </div> -->
+        </li>
+      </ul>
+      <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="nav-icon icon-speedometer"></i> Dashboard
+                <span class="badge badge-primary">NEW</span>
+              </a>
+            </li>
+            <li class="nav-title">Visualize</li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="nav-icon icon-drop"></i> Script Debugger</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="opcodes.html">
+                <i class="nav-icon icon-drop"></i> Op Codes</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="typography.html">
+                <i class="nav-icon icon-pencil"></i> Typography</a>
+            </li> -->
+            <!-- <li class="nav-title">Components</li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> Base</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="base/breadcrumb.html">
+                    <i class="nav-icon icon-puzzle"></i> Breadcrumb</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/cards.html">
+                    <i class="nav-icon icon-puzzle"></i> Cards</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/carousel.html">
+                    <i class="nav-icon icon-puzzle"></i> Carousel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/collapse.html">
+                    <i class="nav-icon icon-puzzle"></i> Collapse</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/forms.html">
+                    <i class="nav-icon icon-puzzle"></i> Forms</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/jumbotron.html">
+                    <i class="nav-icon icon-puzzle"></i> Jumbotron</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/list-group.html">
+                    <i class="nav-icon icon-puzzle"></i> List group</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/navs.html">
+                    <i class="nav-icon icon-puzzle"></i> Navs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/pagination.html">
+                    <i class="nav-icon icon-puzzle"></i> Pagination</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/popovers.html">
+                    <i class="nav-icon icon-puzzle"></i> Popovers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/progress.html">
+                    <i class="nav-icon icon-puzzle"></i> Progress</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/scrollspy.html">
+                    <i class="nav-icon icon-puzzle"></i> Scrollspy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/switches.html">
+                    <i class="nav-icon icon-puzzle"></i> Switches</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/tables.html">
+                    <i class="nav-icon icon-puzzle"></i> Tables</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/tabs.html">
+                    <i class="nav-icon icon-puzzle"></i> Tabs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/tooltips.html">
+                    <i class="nav-icon icon-puzzle"></i> Tooltips</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-cursor"></i> Buttons</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/buttons.html">
+                    <i class="nav-icon icon-cursor"></i> Buttons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/button-group.html">
+                    <i class="nav-icon icon-cursor"></i> Buttons Group</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/dropdowns.html">
+                    <i class="nav-icon icon-cursor"></i> Dropdowns</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/brand-buttons.html">
+                    <i class="nav-icon icon-cursor"></i> Brand Buttons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="charts.html">
+                <i class="nav-icon icon-pie-chart"></i> Charts</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-star"></i> Icons</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/coreui-icons.html">
+                    <i class="nav-icon icon-star"></i> CoreUI Icons
+                    <span class="badge badge-success">NEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/flags.html">
+                    <i class="nav-icon icon-star"></i> Flags</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/font-awesome.html">
+                    <i class="nav-icon icon-star"></i> Font Awesome
+                    <span class="badge badge-secondary">4.7</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/simple-line-icons.html">
+                    <i class="nav-icon icon-star"></i> Simple Line Icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-bell"></i> Notifications</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/alerts.html">
+                    <i class="nav-icon icon-bell"></i> Alerts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/badge.html">
+                    <i class="nav-icon icon-bell"></i> Badge</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/modals.html">
+                    <i class="nav-icon icon-bell"></i> Modals</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="widgets.html">
+                <i class="nav-icon icon-calculator"></i> Widgets
+                <span class="badge badge-primary">NEW</span>
+              </a>
+            </li> -->
+            <li class="divider"></li>
+            <li class="nav-title">Database</li>
+            <li class="nav-item nav-dropdown">
+              <!-- <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-star"></i> Pages</a>
+              <ul class="nav-dropdown-items"> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="bitcoindatabase.html" target="_top">
+                    <i class="nav-icon icon-star"></i> Bitcoin Database</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="register.html" target="_top">
+                    <i class="nav-icon icon-star"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="404.html" target="_top">
+                    <i class="nav-icon icon-star"></i> Error 404</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="500.html" target="_top">
+                    <i class="nav-icon icon-star"></i> Error 500</a>
+                </li> -->
+              <!-- </ul> -->
+            </li>
+            <!-- <li class="nav-item mt-auto">
+              <a class="nav-link nav-link-success" href="https://coreui.io" target="_top">
+                <i class="nav-icon icon-cloud-download"></i> Download CoreUI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-danger" href="https://coreui.io/pro/" target="_top">
+                <i class="nav-icon icon-layers"></i> Try CoreUI
+                <strong>PRO</strong>
+              </a>
+            </li> -->
+          </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <!-- <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+          </li> -->
+          <li class="breadcrumb-item active">Dashboard</li>
+          <!-- Breadcrumb Menu-->
+          <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+              <a class="btn" href="#">
+                <i class="icon-speech"></i>
+              </a>
+              <a class="btn" href="index.html">
+                <i class="icon-graph"></i>  Dashboard</a>
+              <!-- <a class="btn" href="#">
+                <i class="icon-settings"></i>  Settings</a> -->
+            </div>
+          </li>
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+
+            <style>
+.mw-cite-backlink,.cite-accessibility-label{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.mw-references-columns{-webkit-column-width:30em;-moz-column-width:30em;column-width:30em}.mw-references-columns li{-webkit-column-break-inside:avoid;page-break-inside:avoid;break-inside:avoid-column}sup.reference{unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate;white-space:nowrap}ol.references li:target,sup.reference:target{background-color:#def;background-color:rgba( 0,127,255,0.133 )}.mw-ext-cite-error{font-weight:700;unicode-bidi:embed}@media print{.mw-cite-backlink{display:none}}@media print{.noprint,.catlinks,.magnify,.mw-cite-backlink,.mw-jump,.mw-editsection,.mw-editsection-like,.mw-hidden-catlinks,.mw-indicators,.mw-redirectedfrom,.patrollink,.usermessage,#column-one,#footer-places,#jump-to-nav,#mw-navigation,#siteNotice,#f-poweredbyico,#f-copyrightico,li#about,li#disclaimer,li#mobileview,li#privacy{display:none}body{background:#fff;color:#000;margin:0;padding:0}a{background:0 0!important;padding:0!important}a,a.external,a.new,a.stub{color:#000!important;text-decoration:none!important;color:inherit!important;text-decoration:inherit!important}.mw-body-content a.external.text:after,.mw-body-content a.external.autonumber:after{content:' (' attr( href ) ')';word-break:break-all;word-wrap:break-word}.mw-body-content a.external.text[href^='//']:after,.mw-body-content a.external.autonumber[href^='//']:after{content:' (https:' attr( href ) ')'}dt{font-weight:700}h1,h2,h3,h4,h5,h6{font-weight:700;page-break-after:avoid;page-break-before:avoid}p{margin:1em 0;line-height:1.2;orphans:3;widows:3}img,figure,.wikitable,.thumb{page-break-inside:avoid}img{border:0;vertical-align:middle}pre,.mw-code{background:#fff;color:#000;border:1pt dashed #000;padding:1em 0;font-size:8pt;white-space:pre;word-wrap:break-word;overflow:auto}sup,sub{line-height:1}ul{list-style-type:square}#globalWrapper{width:100%!important;min-width:0!important}.mw-body{background:#fff;color:#000;border:0!important;padding:0!important;margin:0!important;direction:ltr}#column-content{margin:0!important}#column-content .mw-body{padding:1em;margin:0!important}#toc,.toc{background-color:#f9f9f9;border:1pt solid #aaa;padding:5px;display:table}.tocnumber,.toctext{display:table-cell}.tocnumber{padding-left:0;padding-right:.5em}.mw-content-ltr .tocnumber{padding-left:0;padding-right:.5em}.mw-content-rtl .tocnumber{padding-left:.5em;padding-right:0}table.floatright,div.floatright,div.tright{float:right;clear:right;position:relative}table.floatleft,div.floatleft,div.tleft{float:left;clear:left;position:relative}div.tleft{margin:.5em 1.4em 1.3em 0}div.tright{margin:.5em 0 1.3em 1.4em}table.floatright,div.floatright{margin:0 0 .5em .5em;border:0}table.floatleft,div.floatleft{margin:0 .5em .5em 0;border:0}div.floatleft p,div.floatright p{font-style:italic}.center{text-align:center}div.thumb{background-color:transparent;width:auto}div.thumb a{border-bottom:0}div.thumbinner{background-color:#fff;border:0;border-radius:2px;padding:5px;font-size:10pt;color:#666;text-align:center;overflow:hidden;min-width:100px}html .thumbcaption{text-align:left;line-height:1.4;padding:3px}img.thumbborder{border:1pt solid #ddd}table.wikitable,.mw_metadata{background:#fff;margin:1em 0;border:1pt solid #aaa;border-collapse:collapse;font-size:10pt}table.wikitable>caption,.mw_metadata caption{padding:5px;font-size:10pt}table.wikitable>tr>th,table.wikitable>tr>td,table.wikitable>*>tr>th,table.wikitable>*>tr>td,.mw_metadata th,.mw_metadata td{background:#fff!important;color:#000!important;border:1pt solid #aaa;padding:.4em .6em}table.wikitable>tr>th,table.wikitable>*>tr>th,.mw_metadata th{text-align:center}table.listing,table.listing td{border:1pt solid #000;border-collapse:collapse}.catlinks ul{display:inline;padding:0;list-style:none none}.catlinks li{display:inline-block;line-height:1.15;margin:.1em 0;border-left:1pt solid #aaa;padding:0 .4em}.catlinks li:first-child{border-left:0;padding-left:.2em}.printfooter{padding:1em 0}#footer{background:#fff;color:#000;margin-top:1em;border-top:1pt solid #aaa;padding-top:5px;direction:ltr}}@media screen{.mw-content-ltr{direction:ltr}.mw-content-rtl{direction:rtl}.sitedir-ltr textarea,.sitedir-ltr input{direction:ltr}.sitedir-rtl textarea,.sitedir-rtl input{direction:rtl}.mw-userlink{unicode-bidi:embed}mark{background-color:#ff0;color:#000}wbr{display:inline-block}input[type=submit],input[type=button],input[type=reset],input[type=file]{direction:ltr}textarea[dir=ltr],input[dir=ltr]{direction:ltr}textarea[dir=rtl],input[dir=rtl]{direction:rtl}abbr[title],.explain[title]{border-bottom:1px dotted;cursor:help}@supports(text-decoration:underline dotted){abbr[title],.explain[title]{border-bottom:0;text-decoration:underline dotted}}span.comment{font-style:italic;unicode-bidi:-moz-isolate;unicode-bidi:isolate}#editform,#toolbar,#wpTextbox1{clear:both}#toolbar{height:22px}.mw-editfont-default:not( textarea ){font-family:monospace}.mw-editfont-monospace{font-family:monospace}.mw-editfont-sans-serif{font-family:sans-serif}.mw-editfont-serif{font-family:serif}.mw-underline-always a{text-decoration:underline}.mw-underline-never a{text-decoration:none}li span.deleted,span.history-deleted{text-decoration:line-through;color:#72777d;font-style:italic}.not-patrolled{background-color:#ffa}.unpatrolled{font-weight:700;color:#d33}div.patrollink{font-size:75%;text-align:right}td.mw-label{text-align:right;vertical-align:middle}td.mw-input{text-align:left}td.mw-submit{text-align:left;white-space:nowrap}.mw-input-with-label{white-space:nowrap;display:inline-block}.mw-content-ltr .thumbcaption{text-align:left}.mw-content-ltr .magnify{float:right}.mw-content-rtl .thumbcaption{text-align:right}.mw-content-rtl .magnify{float:left}#catlinks{text-align:left}.catlinks ul{display:inline;margin:0;padding:0;list-style:none;list-style-type:none;list-style-image:none;vertical-align:middle!ie}.catlinks li{display:inline-block;line-height:1.25em;border-left:1px solid #a2a9b1;margin:.125em 0;padding:0 .5em;zoom:1;display:inline!ie}.catlinks li:first-child{padding-left:.25em;border-left:0}.catlinks li a.mw-redirect{font-style:italic}.mw-hidden-cats-hidden{display:none}.catlinks-allhidden{display:none}p.mw-protect-editreasons,p.mw-filedelete-editreasons,p.mw-delete-editreasons{font-size:90%;text-align:right}.autocomment{color:#72777d}.newpage,.minoredit,.botedit{font-weight:700}div.mw-warning-with-logexcerpt{padding:3px;margin-bottom:3px;border:2px solid #2a4b8d;clear:both}div.mw-warning-with-logexcerpt ul li{font-size:90%}span.mw-revdelundel-link,strong.mw-revdelundel-link{font-size:90%}span.mw-revdelundel-hidden,input.mw-revdelundel-hidden{visibility:hidden}td.mw-revdel-checkbox,th.mw-revdel-checkbox{padding-right:10px;text-align:center}a.new{color:#ba0000}a.mw-selflink{color:inherit;font-weight:700;text-decoration:inherit}a.mw-selflink:hover{cursor:inherit;text-decoration:inherit}a.mw-selflink:active,a.mw-selflink:visited{color:inherit}.plainlinks a.external{background:0 0!important;padding:0!important}.rtl a.external.free,.rtl a.external.autonumber{direction:ltr;unicode-bidi:embed}table.wikitable{background-color:#f8f9fa;color:#222;margin:1em 0;border:1px solid #a2a9b1;border-collapse:collapse}table.wikitable>tr>th,table.wikitable>tr>td,table.wikitable>*>tr>th,table.wikitable>*>tr>td{border:1px solid #a2a9b1;padding:.2em .4em}table.wikitable>tr>th,table.wikitable>*>tr>th{background-color:#eaecf0;text-align:center}table.wikitable>caption{font-weight:700}.error,.warning,.success{font-size:larger}.error{color:#d33}.warning{color:#705000}.success{color:#009000}.errorbox,.warningbox,.successbox{border:1px solid;padding:.5em 1em;margin-bottom:1em;display:inline-block;zoom:1;*display:inline}.errorbox h2,.warningbox h2,.successbox h2{font-size:1em;color:inherit;font-weight:700;display:inline;margin:0 .5em 0 0;border:0}.errorbox{color:#d33;border-color:#fac5c5;background-color:#fae3e3}.warningbox{color:#705000;border-color:#fde29b;background-color:#fdf1d1}.successbox{color:green;border-color:#b7fdb5;background-color:#e1fddf}.mw-infobox{border:2px solid #ff7f00;margin:.5em;clear:left;overflow:hidden}.mw-infobox-left{margin:7px;float:left;width:35px}.mw-infobox-right{margin:.5em .5em .5em 49px}.previewnote{color:#d33;margin-bottom:1em}.previewnote p{text-indent:3em;margin:.8em 0}.visualClear{clear:both}.mw-datatable{border-collapse:collapse}.mw-datatable,.mw-datatable td,.mw-datatable th{border:1px solid #a2a9b1;padding:0 .15em}.mw-datatable th{background-color:#ddf}.mw-datatable td{background-color:#fff}.mw-datatable tr:hover td{background-color:#eaf3ff}.mw-content-ltr ul,.mw-content-rtl .mw-content-ltr ul{margin:.3em 0 0 1.6em;padding:0}.mw-content-rtl ul,.mw-content-ltr .mw-content-rtl ul{margin:.3em 1.6em 0 0;padding:0}.mw-content-ltr ol,.mw-content-rtl .mw-content-ltr ol{margin:.3em 0 0 3.2em;padding:0}.mw-content-rtl ol,.mw-content-ltr .mw-content-rtl ol{margin:.3em 3.2em 0 0;padding:0}.mw-content-ltr dd,.mw-content-rtl .mw-content-ltr dd{margin-left:1.6em;margin-right:0}.mw-content-rtl dd,.mw-content-ltr .mw-content-rtl dd{margin-right:1.6em;margin-left:0}.mw-ajax-loader{background-image:url(/w/resources/src/mediawiki.legacy/images/ajax-loader.gif?57f34);background-position:center center;background-repeat:no-repeat;padding:16px;position:relative;top:-16px}.mw-small-spinner{padding:10px!important;margin-right:.6em;background-image:url(/w/resources/src/mediawiki.legacy/images/spinner.gif?ca65b);background-position:center center;background-repeat:no-repeat}h1:lang( anp ),h1:lang( as ),h1:lang( bh ),h1:lang( bho ),h1:lang( bn ),h1:lang( gu ),h1:lang( hi ),h1:lang( kn ),h1:lang( ks ),h1:lang( ml ),h1:lang( mr ),h1:lang( my ),h1:lang( mai ),h1:lang( ne ),h1:lang( new ),h1:lang( or ),h1:lang( pa ),h1:lang( pi ),h1:lang( sa ),h1:lang( ta ),h1:lang( te ){line-height:1.6em!important}h2:lang( anp ),h3:lang( anp ),h4:lang( anp ),h5:lang( anp ),h6:lang( anp ),h2:lang( as ),h3:lang( as ),h4:lang( as ),h5:lang( as ),h6:lang( as ),h2:lang( bho ),h3:lang( bho ),h4:lang( bho ),h5:lang( bho ),h6:lang( bho ),h2:lang( bh ),h3:lang( bh ),h4:lang( bh ),h5:lang( bh ),h6:lang( bh ),h2:lang( bn ),h3:lang( bn ),h4:lang( bn ),h5:lang( bn ),h6:lang( bn ),h2:lang( gu ),h3:lang( gu ),h4:lang( gu ),h5:lang( gu ),h6:lang( gu ),h2:lang( hi ),h3:lang( hi ),h4:lang( hi ),h5:lang( hi ),h6:lang( hi ),h2:lang( kn ),h3:lang( kn ),h4:lang( kn ),h5:lang( kn ),h6:lang( kn ),h2:lang( ks ),h3:lang( ks ),h4:lang( ks ),h5:lang( ks ),h6:lang( ks ),h2:lang( ml ),h3:lang( ml ),h4:lang( ml ),h5:lang( ml ),h6:lang( ml ),h2:lang( mr ),h3:lang( mr ),h4:lang( mr ),h5:lang( mr ),h6:lang( mr ),h2:lang( my ),h3:lang( my ),h4:lang( my ),h5:lang( my ),h6:lang( my ),h2:lang( mai ),h3:lang( mai ),h4:lang( mai ),h5:lang( mai ),h6:lang( mai ),h2:lang( ne ),h3:lang( ne ),h4:lang( ne ),h5:lang( ne ),h6:lang( ne ),h2:lang( new ),h3:lang( new ),h4:lang( new ),h5:lang( new ),h6:lang( new ),h2:lang( or ),h3:lang( or ),h4:lang( or ),h5:lang( or ),h6:lang( or ),h2:lang( pa ),h3:lang( pa ),h4:lang( pa ),h5:lang( pa ),h6:lang( pa ),h2:lang( pi ),h3:lang( pi ),h4:lang( pi ),h5:lang( pi ),h6:lang( pi ),h2:lang( sa ),h3:lang( sa ),h4:lang( sa ),h5:lang( sa ),h6:lang( sa ),h2:lang( ta ),h3:lang( ta ),h4:lang( ta ),h5:lang( ta ),h6:lang( ta ),h2:lang( te ),h3:lang( te ),h4:lang( te ),h5:lang( te ),h6:lang( te ){line-height:1.2em}ol:lang( azb ) li,ol:lang( bcc ) li,ol:lang( bgn ) li,ol:lang( bqi ) li,ol:lang( fa ) li,ol:lang( glk ) li,ol:lang( kk-arab ) li,ol:lang( lrc ) li,ol:lang( luz ) li,ol:lang( mzn ) li{list-style-type:-moz-persian;list-style-type:persian}ol:lang( ckb ) li,ol:lang( sdh ) li{list-style-type:-moz-arabic-indic;list-style-type:arabic-indic}ol:lang( hi ) li,ol:lang( mai ) li,ol:lang( mr ) li,ol:lang( ne ) li{list-style-type:-moz-devanagari;list-style-type:devanagari}ol:lang( as ) li,ol:lang( bn ) li{list-style-type:-moz-bengali;list-style-type:bengali}ol:lang( or ) li{list-style-type:-moz-oriya;list-style-type:oriya}#toc ul,.toc ul{margin:.3em 0}.mw-content-ltr .toc ul,.mw-content-ltr #toc ul,.mw-content-rtl .mw-content-ltr .toc ul,.mw-content-rtl .mw-content-ltr #toc ul{text-align:left}.mw-content-rtl .toc ul,.mw-content-rtl #toc ul,.mw-content-ltr .mw-content-rtl .toc ul,.mw-content-ltr .mw-content-rtl #toc ul{text-align:right}.mw-content-ltr .toc ul ul,.mw-content-ltr #toc ul ul,.mw-content-rtl .mw-content-ltr .toc ul ul,.mw-content-rtl .mw-content-ltr #toc ul ul{margin:0 0 0 2em}.mw-content-rtl .toc ul ul,.mw-content-rtl #toc ul ul,.mw-content-ltr .mw-content-rtl .toc ul ul,.mw-content-ltr .mw-content-rtl #toc ul ul{margin:0 2em 0 0}#toc #toctitle,.toc #toctitle,#toc .toctitle,.toc .toctitle{direction:ltr}#mw-clearyourcache,#mw-sitecsspreview,#mw-sitejspreview,#mw-usercsspreview,#mw-userjspreview{direction:ltr;unicode-bidi:embed}#mw-revision-info,#mw-revision-info-current,#mw-revision-nav{direction:ltr}div.tright,div.floatright,table.floatright{clear:right;float:right}div.tleft,div.floatleft,table.floatleft{float:left;clear:left}div.floatright,table.floatright,div.floatleft,table.floatleft{position:relative}#mw-credits a{unicode-bidi:embed}.mw-jump,#jump-to-nav{overflow:hidden;height:0;zoom:1}.printfooter{display:none}.xdebug-error{position:absolute;z-index:99}.mw-editsection,#jump-to-nav{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.mw-editsection,.mw-editsection-like{font-size:small;font-weight:400;margin-left:1em;vertical-align:baseline;line-height:1em;display:inline-block}.mw-content-ltr .mw-editsection,.mw-content-rtl .mw-content-ltr .mw-editsection{margin-left:1em}.mw-content-rtl .mw-editsection,.mw-content-ltr .mw-content-rtl .mw-editsection{margin-right:1em}sup,sub{line-height:1}}.mw-headline-anchor{display:none}@media screen{a{text-decoration:none;color:#0645ad;background:0 0}a:not( [href] ){cursor:pointer}a:visited{color:#0b0080}a:active{color:#faa700}a:hover,a:focus{text-decoration:underline}a:lang( ar ),a:lang( kk-arab ),a:lang( mzn ),a:lang( ps ),a:lang( ur ){text-decoration:none}a.stub{color:#723}a.new,#p-personal a.new{color:#ba0000}a.new:visited,#p-personal a.new:visited{color:#a55858}.mw-body-content a.extiw,.mw-body-content a.extiw:active{color:#36b}.mw-body-content a.extiw:visited{color:#636}.mw-body-content a.extiw:active{color:#b63}.mw-body-content a.external{color:#36b}.mw-body-content a.external:visited{color:#636}.mw-body-content a.external:active{color:#b63}.mw-body-content a.external.free{word-wrap:break-word}img{border:0;vertical-align:middle}hr{height:1px;color:#a2a9b1;background-color:#a2a9b1;border:0;margin:.2em 0}h1,h2,h3,h4,h5,h6{color:#000;background:0 0;font-weight:400;margin:0;overflow:hidden;padding-top:.5em;padding-bottom:.17em;border-bottom:1px solid #a2a9b1}h1{font-size:188%}h2{font-size:150%}h3,h4,h5,h6{border-bottom:0;font-weight:700}h3{font-size:128%}h4{font-size:116%}h5{font-size:108%}h6{font-size:100%}h1,h2{margin-bottom:.6em}h3,h4,h5{margin-bottom:.3em}p{margin:.4em 0 .5em}p img{margin:0}ul{list-style-type:square;margin:.3em 0 0 1.6em;padding:0}ol{margin:.3em 0 0 3.2em;padding:0;list-style-image:none}li{margin-bottom:.1em}dt{font-weight:700;margin-bottom:.1em}dl{margin-top:.2em;margin-bottom:.5em}dd{margin-left:1.6em;margin-bottom:.1em}pre,code,tt,kbd,samp,.mw-code{font-family:monospace,courier}code{color:#000;background-color:#f8f9fa;border:1px solid #eaecf0;border-radius:2px;padding:1px 4px}pre,.mw-code{color:#000;background-color:#f8f9fa;border:1px solid #eaecf0;padding:1em;white-space:pre-wrap}table{font-size:100%}fieldset{border:1px solid #2a4b8d;margin:1em 0;padding:0 1em 1em}fieldset.nested{margin:0 0 .5em;padding:0 .5em .5em}legend{padding:.5em;font-size:95%}form{border:0;margin:0}textarea{width:100%;padding:.1em;display:block;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.center{width:100%;text-align:center}*.center *{margin-left:auto;margin-right:auto}.small{font-size:94%}table.small{font-size:100%}#toc,.toc,.mw-warning,.toccolours{border:1px solid #a2a9b1;background-color:#f8f9fa;padding:5px;font-size:95%}#toc,.toc{display:inline-block;display:table;zoom:1;*display:inline;padding:7px}table#toc,table.toc{border-collapse:collapse}table#toc td,table.toc td{padding:0}#toc h2,.toc h2{display:inline;border:0;padding:0;font-size:100%;font-weight:700}#toc #toctitle,.toc #toctitle,#toc .toctitle,.toc .toctitle{text-align:center}#toc ul,.toc ul{list-style-type:none;list-style-image:none;margin-left:0;padding:0;text-align:left}#toc ul ul,.toc ul ul{margin:0 0 0 2em}.tocnumber,.toctext{display:table-cell;text-decoration:inherit}.tocnumber{padding-left:0;padding-right:.5em;color:#222}.mw-content-ltr .tocnumber{padding-left:0;padding-right:.5em}.mw-content-rtl .tocnumber{padding-left:.5em;padding-right:0}.mw-warning{margin-left:50px;margin-right:50px;text-align:center}div.floatright,table.floatright{margin:0 0 .5em .5em}div.floatright p{font-style:italic}div.floatleft,table.floatleft{margin:0 .5em .5em 0}div.floatleft p{font-style:italic}div.thumb{margin-bottom:.5em;width:auto;background-color:transparent}div.thumbinner{border:1px solid #c8ccd1;padding:3px;background-color:#f8f9fa;font-size:94%;text-align:center;overflow:hidden}html .thumbimage{background-color:#fff;border:1px solid #c8ccd1}html .thumbcaption{border:0;line-height:1.4em;padding:3px;font-size:94%;text-align:left}div.magnify{float:right;margin-left:3px}div.magnify a{display:block;text-indent:15px;white-space:nowrap;overflow:hidden;width:15px;height:11px;background-image:url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.png?4f704);background-image:linear-gradient( transparent,transparent ),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTEgMTUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMSI+CiA8ZyBpZD0ibWFnbmlmeS1jbGlwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMwMDAiPgogPHBhdGggaWQ9ImJpZ2JveCIgZD0iTTEuNTA5IDEuODY1aDEwLjk5djcuOTE5aC0xMC45OXoiLz4KIDxwYXRoIGlkPSJzbWFsbGJveCIgZD0iTS0xLjQ5OSA2Ljg2OGg1Ljk0M3Y0LjkwNGgtNS45NDN6Ii8+CiA8L2c+Cjwvc3ZnPgo=);-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}img.thumbborder{border:1px solid #eaecf0}.mw-content-ltr .thumbcaption{text-align:left}.mw-content-ltr .magnify{float:right;margin-left:3px;margin-right:0}.mw-content-ltr div.magnify a{background-image:url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.png?4f704);background-image:linear-gradient( transparent,transparent ),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTEgMTUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMSI+CiA8ZyBpZD0ibWFnbmlmeS1jbGlwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMwMDAiPgogPHBhdGggaWQ9ImJpZ2JveCIgZD0iTTEuNTA5IDEuODY1aDEwLjk5djcuOTE5aC0xMC45OXoiLz4KIDxwYXRoIGlkPSJzbWFsbGJveCIgZD0iTS0xLjQ5OSA2Ljg2OGg1Ljk0M3Y0LjkwNGgtNS45NDN6Ii8+CiA8L2c+Cjwvc3ZnPgo=)}.mw-content-rtl .thumbcaption{text-align:right}.mw-content-rtl .magnify{float:left;margin-left:0;margin-right:3px}.mw-content-rtl div.magnify a{background-image:url(/w/resources/src/mediawiki.skinning/images/magnify-clip-rtl.png?a9fb3);background-image:linear-gradient( transparent,transparent ),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTEgMTUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMSI+CiA8ZyBpZD0ibWFnbmlmeS1jbGlwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMwMDAiPgogPHBhdGggaWQ9ImJpZ2JveCIgZD0iTTkuNDkxIDEuODY1aC0xMC45OXY3LjkxOWgxMC45OXoiLz4KIDxwYXRoIGlkPSJzbWFsbGJveCIgZD0iTTEyLjQ5OSA2Ljg2OGgtNS45NDN2NC45MDRoNS45NDN6Ii8+CiA8L2c+Cjwvc3ZnPgo=)}div.tright{margin:.5em 0 1.3em 1.4em}div.tleft{margin:.5em 1.4em 1.3em 0}body.mw-hide-empty-elt .mw-empty-elt{display:none}.catlinks{border:1px solid #a2a9b1;background-color:#f8f9fa;padding:5px;margin-top:1em;clear:both}textarea{border:1px solid #a2a9b1}.editOptions{background-color:#eaecf0;border:1px solid #c8ccd1;border-top:0;padding:1em 1em 1.5em;margin-bottom:2em}.usermessage{background-color:#ffce7b;border:1px solid orange;color:#000;font-weight:700;margin:2em 0 1em;padding:.5em 1em;vertical-align:middle}#siteNotice{position:relative;text-align:center;margin:0}#localNotice{margin-bottom:.9em}.firstHeading{margin-bottom:.1em;line-height:1.2em;padding-bottom:0}#siteSub{display:none}#jump-to-nav{margin-top:-1.4em;margin-bottom:1.4em}#contentSub,#contentSub2{font-size:84%;line-height:1.2em;margin:0 0 1.4em 1em;color:#54595d;width:auto}span.subpages{display:block}}.mw-wiki-logo{background-image:url(/img/BC_logo2.png)}@media screen{html{font-size:100%}html,body{height:100%;margin:0;padding:0;font-family:sans-serif}body{background-color:#f6f6f6}.mw-body,.parsoid-body{padding:1em;background-color:#fff;color:#222;direction:ltr}.mw-body{margin-left:10em;border:1px solid #a7d7f9;border-right-width:0;margin-top:-1px}.mw-body h1,.mw-body-content h1,.mw-body-content h2{font-family:linux libertine,georgia,times,serif;line-height:1.3;margin-bottom:.25em;padding:0}.mw-body h1:lang( ja ),.mw-body-content h1:lang( ja ),.mw-body-content h2:lang( ja ),.mw-body h1:lang( he ),.mw-body-content h1:lang( he ),.mw-body-content h2:lang( he ),.mw-body h1:lang( ko ),.mw-body-content h1:lang( ko ),.mw-body-content h2:lang( ko ){font-family:sans-serif}.mw-body h1,.mw-body-content h1{font-size:1.8em}.mw-body .firstHeading{overflow:visible}.mw-body .mw-indicators{float:right;line-height:1.6;font-size:.875em;position:relative;z-index:1}.mw-body .mw-indicator{display:inline-block;zoom:1;*display:inline}.mw-body-content{position:relative;line-height:1.6;font-size:.875em;z-index:0}.mw-body-content p{line-height:inherit;margin:.5em 0}.mw-body-content h1{margin-top:1em}.mw-body-content h2{font-size:1.5em;margin-top:1em}.mw-body-content h3,.mw-body-content h4,.mw-body-content h5,.mw-body-content h6{line-height:1.6;margin-top:.3em;margin-bottom:0;padding-bottom:0}.mw-body-content h3{font-size:1.2em}.mw-body-content h3,.mw-body-content h4{font-weight:700}.mw-body-content h4,.mw-body-content h5,.mw-body-content h6{font-size:100%}.mw-body-content #toc h2,.mw-body-content .toc h2{font-size:100%;font-family:sans-serif}.mw-editsection,.mw-editsection-like{font-family:sans-serif}div.emptyPortlet{display:none}ul{list-style-type:disc;list-style-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjUiIGhlaWdodD0iMTMiPgo8Y2lyY2xlIGN4PSIyLjUiIGN5PSI5LjUiIHI9IjIuNSIgZmlsbD0iIzAwNTI4YyIvPgo8L3N2Zz4K);list-style-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAANCAIAAADuXjPfAAAABnRSTlMA/wD/AP83WBt9AAAAHklEQVR4AWP4jwrowWcI6oEgEBtIISNCfFT9mOYDACO/lbNIGC/yAAAAAElFTkSuQmCC) \9;list-style-image:url(/w/skins/Vector/images/bullet-icon.png?e31f8) \9!ie}pre,.mw-code{line-height:1.3em}#siteNotice{font-size:.8em}#p-personal{position:absolute;top:.33em;right:.75em;z-index:100}#p-personal h3{display:none}#p-personal ul{list-style-type:none;list-style-image:none;margin:0;padding-left:10em}#p-personal li{line-height:1.125em;float:left;margin-left:.75em;margin-top:.5em;font-size:.75em;white-space:nowrap}#pt-userpage,#pt-anonuserpage{background-position:left top;background-repeat:no-repeat;background-image:url(/w/skins/Vector/images/user-icon.png?13155);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCXdpZHRoPSIxMnB4IiBoZWlnaHQ9IjEzLjgzNnB4IiB2aWV3Qm94PSIwIDAgMTIgMTMuODM2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMiAxMy44MzYiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjNzc3Nzc3IiBkPSJNMS45MzgsNi42NTZjLTEuMzIsMS40ODUtMS40NywzLjE1LTAuOTcsNC4yNWMwLjMyMywwLjcwNywwLjc4LDEuMTI3LDEuMzEzLDEuMzc1CgljMC40OTYsMC4yMjksMS4wNzQsMC4yNzMsMS42NTgsMC4yODJjMC4wMjMsMCwwLjA0LDAuMDMsMC4wNjIsMC4wM2g0LjE4N2MwLjYxLDAsMS4yMjUtMC4xMjUsMS43NS0wLjQwNQoJYzAuNTI3LTAuMjgsMC45NjEtMC43MTgsMS4xODgtMS4zNzZjMC4zMzUtMC45NjQsMC4xNzUtMi41MjktMS4wOTQtNC4wM0M5LjA5NCw3Ljk1NCw3LjY4LDguNzE5LDYuMDY1LDguNzE5CgljLTEuNjc3LDAtMy4xODItMC44MTItNC4xMjUtMi4wNjNIMS45Mzh6Ii8+CjxwYXRoIGZpbGw9IiM3Nzc3NzciIGQ9Ik02LjA2MywwYy0xLjg5LDAtMy41OTUsMS42NzQtMy41OTQsMy41NjNDMi40NjcsNS40NSw0LjE3Myw3LjE1NSw2LjA2LDcuMTU1CgljMS44OSwwLDMuNTY0LTEuNzA1LDMuNTYzLTMuNTkzQzkuNjI1LDEuNjczLDcuOTUsMCw2LjA2MywwTDYuMDYzLDB6Ii8+Cjwvc3ZnPgo=);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/user-icon.png?13155);padding-left:15px!important}#pt-anonuserpage{color:#707070}#p-search{float:left;margin-right:.5em;margin-left:.5em}#p-search h3{display:block;position:absolute!important;clip:rect(1px,1px,1px,1px);width:1px;height:1px;margin:-1px;border:0;padding:0;overflow:hidden}#p-search form,#p-search input{margin:0;margin-top:.4em}div#simpleSearch{display:block;width:12.6em;width:20vw;min-width:5em;max-width:20em;padding-right:1.4em;height:1.4em;margin-top:.65em;position:relative;min-height:1px;border:solid 1px #aaa;color:#000;background-color:#fff;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAQCAIAAABY/YLgAAAAJUlEQVQIHQXBsQEAAAjDoND/73UWdnerhmHVsDQZJrNWVg3Dqge6bgMe6bejNAAAAABJRU5ErkJggg==);background-image:url(/w/skins/Vector/images/search-fade.png?50f7b)!ie;background-position:top left;background-repeat:repeat-x}div#simpleSearch input{margin:0;padding:0;border:0;background-color:transparent;color:#000}div#simpleSearch #searchInput{width:100%;padding:.2em 0 .2em .2em;font-size:13px;direction:ltr;-webkit-appearance:textfield}div#simpleSearch #searchInput:focus{outline:0}div#simpleSearch #searchInput::-webkit-input-placeholder{color:#72777d;opacity:1}div#simpleSearch #searchInput:-ms-input-placeholder{color:#72777d;opacity:1}div#simpleSearch #searchInput::-moz-placeholder{color:#72777d;opacity:1}div#simpleSearch #searchInput:-moz-placeholder{color:#72777d;opacity:1}div#simpleSearch #searchInput::placeholder{color:#72777d;opacity:1}div#simpleSearch #searchInput.placeholder{color:#72777d;opacity:1}div#simpleSearch #searchInput::-webkit-search-decoration,div#simpleSearch #searchInput::-webkit-search-cancel-button,div#simpleSearch #searchInput::-webkit-search-results-button,div#simpleSearch #searchInput::-webkit-search-results-decoration{-webkit-appearance:textfield}div#simpleSearch #searchButton,div#simpleSearch #mw-searchButton{position:absolute;top:0;right:0;width:1.65em;height:100%;cursor:pointer;text-indent:-99999px;line-height:1;direction:ltr;white-space:nowrap;overflow:hidden}div#simpleSearch #searchButton{background-image:url(/w/skins/Vector/images/search-ltr.png?39f97);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEzIj48ZyBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iIzZjNmM2YyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTExLjI5IDExLjcxbC00LTQiLz48Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iNCIvPjwvZz48L3N2Zz4=);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/search-ltr.png?39f97);background-position:center center;background-repeat:no-repeat}div#simpleSearch #mw-searchButton{z-index:1}div.vectorTabs h3{display:none}div.vectorTabs{float:left;height:2.5em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAQ0lEQVR4AWVOhQEAIAzC/X+xAXbXeoDFGA3A9yk1n4juBROcUegfarWjP3ojZvEzxs6j+nygmo+zzsk79nY+tOxdEhlf3UHVgUFrVwAAAABJRU5ErkJggg==);background-image:url(/w/skins/Vector/images/tab-break.png?09d4b)!ie;background-position:bottom left;background-repeat:no-repeat;padding-left:1px}div.vectorTabs ul{float:left;height:100%;list-style-type:none;list-style-image:none;margin:0;padding:0;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAQ0lEQVR4AWVOhQEAIAzC/X+xAXbXeoDFGA3A9yk1n4juBROcUegfarWjP3ojZvEzxs6j+nygmo+zzsk79nY+tOxdEhlf3UHVgUFrVwAAAABJRU5ErkJggg==);background-image:url(/w/skins/Vector/images/tab-break.png?09d4b)!ie;background-position:right bottom;background-repeat:no-repeat}div.vectorTabs ul li{float:left;line-height:1.125em;display:inline-block;height:100%;margin:0;padding:0;background-color:#f3f3f3;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAO0lEQVR4AeSKhREAMQzDdN5/5uixuEKDpqgBjl2f78wd2DVj1+26/h///PfteVMN7zoGebcg1/Y/ZQQAlAUtQCujIJMAAAAASUVORK5CYII=);background-image:url(/w/skins/Vector/images/tab-normal-fade.png?1cc52)!ie;background-position:bottom left;background-repeat:repeat-x;white-space:nowrap}div.vectorTabs ul>li{display:block}div.vectorTabs li{}div.vectorTabs li.new a,div.vectorTabs li.new a:visited{color:#a55858}div.vectorTabs li.selected{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkAQAAAABvV2fNAAAADElEQVR4AWNoGB4QAInlMgFKeRKBAAAAAElFTkSuQmCC);background-image:url(/w/skins/Vector/images/tab-current-fade.png?22887)!ie}div.vectorTabs li.selected a,div.vectorTabs li.selected a:visited{color:#222;text-decoration:none}div.vectorTabs li.icon a{background-position:bottom right;background-repeat:no-repeat}div.vectorTabs li a{display:inline-block;height:1.9em;padding-left:.5em;padding-right:.5em;color:#0645ad;cursor:pointer;font-size:.8em}div.vectorTabs li>a{display:block}div.vectorTabs span{display:inline-block;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAQ0lEQVR4AWVOhQEAIAzC/X+xAXbXeoDFGA3A9yk1n4juBROcUegfarWjP3ojZvEzxs6j+nygmo+zzsk79nY+tOxdEhlf3UHVgUFrVwAAAABJRU5ErkJggg==);background-image:url(/w/skins/Vector/images/tab-break.png?09d4b)!ie;background-position:bottom right;background-repeat:no-repeat;height:100%}div.vectorTabs span a{display:inline-block;padding-top:1.25em}div.vectorTabs span>a{float:left;display:block}div.vectorMenu{direction:ltr;float:left;cursor:pointer;position:relative;line-height:1.125em}body.rtl div.vectorMenu{direction:rtl}div#mw-head div.vectorMenu h3{float:left;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAAQ0lEQVR4AWVOhQEAIAzC/X+xAXbXeoDFGA3A9yk1n4juBROcUegfarWjP3ojZvEzxs6j+nygmo+zzsk79nY+tOxdEhlf3UHVgUFrVwAAAABJRU5ErkJggg==);background-image:url(/w/skins/Vector/images/tab-break.png?09d4b)!ie;background-repeat:no-repeat;background-position:bottom right;font-size:1em;height:2.5em;padding-right:1px;margin-right:-1px}div.vectorMenu h3 span{display:block;font-size:.8em;padding-left:.7em;padding-top:1.25em;padding-right:20px;font-weight:400;color:#444;background-image:url(/w/skins/Vector/images/arrow-down-icon.png?d72f0);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIyIiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNMTUuNTAyIDYuMDAxbC01IDUuMDAxLTUtNS4wMDF6IiBmaWxsPSIjNzk3OTc5Ii8+PC9zdmc+);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/arrow-down-icon.png?d72f0);background-position:100% 100%;background-repeat:no-repeat}div.vectorMenuFocus h3 span{background-image:url(/w/skins/Vector/images/arrow-down-focus-icon.png?69899);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIyIiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNMTUuNTAyIDYuMDAxbC01IDUuMDAxLTUtNS4wMDF6IiBmaWxsPSIjOTI5MjkyIi8+PC9zdmc+);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/arrow-down-focus-icon.png?69899)}div.vectorMenu div.menu{min-width:100%;position:absolute;top:2.5em;left:-1px;background-color:#fff;border:1px solid #a2a9b1;border-top-width:0;clear:both;box-shadow:0 1px 1px 0 rgba(0,0,0,.1);text-align:left;display:none;z-index:2}div.vectorMenu:hover div.menu,div.vectorMenu.menuForceShow div.menu{display:block}div.vectorMenu ul{list-style-type:none;list-style-image:none;padding:0;margin:0;text-align:left}div.vectorMenu ul,x:-moz-any-link{min-width:5em}div.vectorMenu ul,x:-moz-any-link,x:default{min-width:0}div.vectorMenu li{padding:0;margin:0;text-align:left;line-height:1em}div.vectorMenu li a{display:inline-block;padding:.5em;white-space:nowrap;color:#0645ad;cursor:pointer;font-size:.8em}div.vectorMenu li>a{display:block}div.vectorMenu li.selected a,div.vectorMenu li.selected a:visited{color:#222;text-decoration:none}* html div.vectorMenu div.menu{display:block;position:static;border:0}* html div#mw-head div.vectorMenu h3{display:none}* html div.vectorMenu li{float:left;line-height:1.125em;border-right:1px solid #a7d7f9}* html div.vectorMenu li a{padding-top:1.25em}@-webkit-keyframes rotate{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);transform:rotate(360deg)}}@-moz-keyframes rotate{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);transform:rotate(360deg)}}#ca-unwatch.icon a,#ca-watch.icon a{margin:0;padding:0;display:block;width:26px;padding-top:3.1em;margin-top:0;_margin-top:-.8em;height:0;overflow:hidden;background-position:5px 60%}#ca-unwatch.icon a{background-image:url(/w/skins/Vector/images/unwatch-icon.png?fccbe);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNjMmVkZmYiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjNjhiZGZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmZmIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjEzLjQ3IiB5MT0iMTQuMzYzIiB4Mj0iNC41OTYiIHkyPSIzLjM5NyIgaWQ9ImIiIHhsaW5rOmhyZWY9IiNhIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIvPjwvZGVmcz48cGF0aCBkPSJNOC4xMDMgMS4xNDZsMi4xNzUgNC40MDggNC44NjQuNzA3LTMuNTIgMy40MzEuODMxIDQuODQ1LTQuMzUxLTIuMjg3LTQuMzUxIDIuMjg3LjgzMS00Ljg0NS0zLjUyLTMuNDMxIDQuODY0LS43MDd6IiBmaWxsPSJ1cmwoI2IpIiBzdHJva2U9IiM3Y2I1ZDEiIHN0cm9rZS13aWR0aD0iMC45OTk5MTk5OTk5OTk5OTk5Ii8+PC9zdmc+);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/unwatch-icon.png?fccbe)}#ca-watch.icon a{background-image:url(/w/skins/Vector/images/watch-icon.png?e1b42);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNOC4xMDMgMS4xNDZsMi4xNzUgNC40MDggNC44NjQuNzA3LTMuNTIgMy40MzEuODMxIDQuODQ1LTQuMzUxLTIuMjg3LTQuMzUxIDIuMjg3LjgzMS00Ljg0NS0zLjUyLTMuNDMxIDQuODY0LS43MDd6IiBmaWxsPSIjZmZmIiBzdHJva2U9IiM3Y2I1ZDEiIHN0cm9rZS13aWR0aD0iMC45OTk5MTk5OTk5OTk5OTk5Ii8+PC9zdmc+);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/watch-icon.png?e1b42)}#ca-unwatch.icon a:hover,#ca-unwatch.icon a:focus{background-image:url(/w/skins/Vector/images/unwatch-icon-hl.png?c4723);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJhIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNjMmVkZmYiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjNjhiZGZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmZmIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjEzLjQ3IiB5MT0iMTQuMzYzIiB4Mj0iNC41OTYiIHkyPSIzLjM5NyIgaWQ9ImIiIHhsaW5rOmhyZWY9IiNhIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIvPjwvZGVmcz48cGF0aCBkPSJNOC4xMDMgMS4xNDZsMi4xNzUgNC40MDggNC44NjQuNzA3LTMuNTIgMy40MzEuODMxIDQuODQ1LTQuMzUxLTIuMjg3LTQuMzUxIDIuMjg3LjgzMS00Ljg0NS0zLjUyLTMuNDMxIDQuODY0LS43MDd6IiBmaWxsPSJ1cmwoI2IpIiBzdHJva2U9IiNjOGIyNTAiIHN0cm9rZS13aWR0aD0iMC45OTk5MTk5OTk5OTk5OTk5Ii8+PC9zdmc+);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/unwatch-icon-hl.png?c4723)}#ca-watch.icon a:hover,#ca-watch.icon a:focus{background-image:url(/w/skins/Vector/images/watch-icon-hl.png?f4c7e);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNOC4xMDMgMS4xNDZsMi4xNzUgNC40MDggNC44NjQuNzA3LTMuNTIgMy40MzEuODMxIDQuODQ1LTQuMzUxLTIuMjg3LTQuMzUxIDIuMjg3LjgzMS00Ljg0NS0zLjUyLTMuNDMxIDQuODY0LS43MDd6IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNjOGIyNTAiIHN0cm9rZS13aWR0aD0iMC45OTk5MTk5OTk5OTk5OTk5Ii8+PC9zdmc+);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/watch-icon-hl.png?f4c7e)}#ca-unwatch.icon a.loading,#ca-watch.icon a.loading{background-image:url(/w/skins/Vector/images/watch-icon-loading.png?5cb92);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNOC4xMDMgMS4xNDZsMi4xNzUgNC40MDggNC44NjQuNzA3LTMuNTIgMy40MzEuODMxIDQuODQ1LTQuMzUxLTIuMjg3LTQuMzUxIDIuMjg3LjgzMS00Ljg0NS0zLjUyLTMuNDMxIDQuODY0LS43MDd6IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNkMWQxZDEiIHN0cm9rZS13aWR0aD0iMC45OTk5MTk5OTk5OTk5OTk5Ii8+PC9zdmc+);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/watch-icon-loading.png?5cb92);-webkit-animation:rotate 700ms infinite linear;-moz-animation:rotate 700ms infinite linear;animation:rotate 700ms infinite linear;outline:0;cursor:default;pointer-events:none;background-position:50% 60%;-webkit-transform-origin:50% 57%;transform-origin:50% 57%}#ca-unwatch.icon a span,#ca-watch.icon a span{display:none}#mw-navigation h2{position:absolute;top:-9999px}#mw-page-base{height:5em;background-position:bottom left;background-repeat:repeat-x;background-image:url(/w/skins/Vector/images/page-fade.png?1d168);background-color:#f6f6f6;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,#ffffff),color-stop(100%,#f6f6f6));background-image:-webkit-linear-gradient(top,#ffffff 50%,#f6f6f6 100%);background-image:-moz-linear-gradient(top,#ffffff 50%,#f6f6f6 100%);background-image:linear-gradient(#ffffff 50%,#f6f6f6 100%);background-color:#fff}#mw-head-base{margin-top:-5em;margin-left:10em;height:5em}div#mw-head{position:absolute;top:0;right:0;width:100%}div#mw-head h3{margin:0;padding:0}#left-navigation{float:left;margin-left:10em;margin-top:2.5em;margin-bottom:-2.5em;display:inline}#right-navigation{float:right;margin-top:2.5em}#p-logo{width:10em;height:160px}#p-logo a{display:block;width:10em;height:160px;background-repeat:no-repeat;background-position:center center;text-decoration:none}div#mw-panel{font-size:inherit;position:absolute;top:0;width:10em;left:0}div#mw-panel div.portal{margin:0 .6em 0 .7em;padding:.25em 0;direction:ltr;background-position:top left;background-repeat:no-repeat}div#mw-panel div.portal h3{font-size:.75em;color:#444;font-weight:400;margin:.5em 0 0 .66666667em;padding:.25em 0;cursor:default;border:0}div#mw-panel div.portal div.body{margin-left:.5em;padding-top:0;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAABCAAAAAAphRnkAAAAJ0lEQVQIW7XFsQEAIAyAMPD/b7uLWz8wS5youFW1UREfiIpH1Q2VBz7fGPS1dOGeAAAAAElFTkSuQmCC);background-image:url(/w/skins/Vector/images/portal-break.png?3ea1b)!ie;background-repeat:no-repeat}div#mw-panel div.portal div.body ul{list-style-type:none;list-style-image:none;margin:0;padding:.3em 0 0}div#mw-panel div.portal div.body ul li{line-height:1.125em;margin:0;padding:.25em 0;font-size:.75em;word-wrap:break-word}div#mw-panel div.portal div.body ul li a{color:#0645ad}div#mw-panel div.portal div.body ul li a:visited{color:#0b0080}div#mw-panel #p-logo+div.portal{background-image:none;margin-top:1em}div#mw-panel #p-logo+div.portal h3{display:none}div#mw-panel #p-logo+div.portal div.body{background-image:none;margin-left:.5em}div#footer{margin-left:10em;margin-top:0;padding:.75em;direction:ltr}div#footer ul{list-style-type:none;list-style-image:none;margin:0;padding:0}div#footer ul li{margin:0;padding:0;padding-top:.5em;padding-bottom:.5em;color:#333;font-size:.7em}div#footer #footer-icons{float:right}div#footer #footer-icons li{float:left;margin-left:.5em;line-height:2em;text-align:right}div#footer #footer-info li{line-height:1.4em}div#footer #footer-places li{float:left;margin-right:1em;line-height:2em}body.ltr div#footer #footer-places{float:left}.mw-body-content .external{background-position:center right;background-repeat:no-repeat;background-image:url(/w/skins/Vector/images/external-link-ltr-icon.png?325de);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMDZjIiBkPSJNMS41IDQuNTE4aDUuOTgyVjEwLjVIMS41eiIvPjxwYXRoIGQ9Ik01Ljc2NSAxSDExdjUuMzlMOS40MjcgNy45MzdsLTEuMzEtMS4zMUw1LjM5MyA5LjM1bC0yLjY5LTIuNjg4IDIuODEtMi44MDhMNC4yIDIuNTQ0eiIgZmlsbD0iIzA2ZiIvPjxwYXRoIGQ9Ik05Ljk5NSAyLjAwNGwuMDIyIDQuODg1TDguMiA1LjA3IDUuMzIgNy45NSA0LjA5IDYuNzIzbDIuODgyLTIuODgtMS44NS0xLjg1MnoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=);background-image:-o-linear-gradient(transparent,transparent),url(/w/skins/Vector/images/external-link-ltr-icon.png?325de);padding-right:13px}}@media screen and (min-width:982px){.mw-body{margin-left:11em;padding:1.25em 1.5em 1.5em}div#footer{margin-left:11em;padding:1.25em}#mw-panel{padding-left:.5em}#p-search{margin-right:1em}#left-navigation{margin-left:11em}#p-personal{right:1em}#mw-head-base{margin-left:11em}}
+            </style>
+
+            <h3><span class="mw-headline" id="Constants">Constants</span></h3>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_0, OP_FALSE
+            </td>
+            <td>0
+            </td>
+            <td>0x00
+            </td>
+            <td>Nothing.
+            </td>
+            <td>(empty value)
+            </td>
+            <td>An empty array of bytes is pushed onto the stack. (This is not a no-op: an item is added to the stack.)
+            </td></tr>
+            <tr>
+            <td>N/A
+            </td>
+            <td>1-75
+            </td>
+            <td>0x01-0x4b
+            </td>
+            <td>(special)
+            </td>
+            <td>data
+            </td>
+            <td>The next <i>opcode</i> bytes is data to be pushed onto the stack
+            </td></tr>
+            <tr>
+            <td>OP_PUSHDATA1
+            </td>
+            <td>76
+            </td>
+            <td>0x4c
+            </td>
+            <td>(special)
+            </td>
+            <td>data
+            </td>
+            <td>The next byte contains the number of bytes to be pushed onto the stack.
+            </td></tr>
+            <tr>
+            <td>OP_PUSHDATA2
+            </td>
+            <td>77
+            </td>
+            <td>0x4d
+            </td>
+            <td>(special)
+            </td>
+            <td>data
+            </td>
+            <td>The next two bytes contain the number of bytes to be pushed onto the stack in little endian order.
+            </td></tr>
+            <tr>
+            <td>OP_PUSHDATA4
+            </td>
+            <td>78
+            </td>
+            <td>0x4e
+            </td>
+            <td>(special)
+            </td>
+            <td>data
+            </td>
+            <td>The next four bytes contain the number of bytes to be pushed onto the stack in little endian order.
+            </td></tr>
+            <tr>
+            <td>OP_1NEGATE
+            </td>
+            <td>79
+            </td>
+            <td>0x4f
+            </td>
+            <td>Nothing.
+            </td>
+            <td> -1
+            </td>
+            <td>The number -1 is pushed onto the stack.
+            </td></tr>
+            <tr>
+            <td>OP_1, OP_TRUE
+            </td>
+            <td>81
+            </td>
+            <td>0x51
+            </td>
+            <td>Nothing.
+            </td>
+            <td>1
+            </td>
+            <td>The number 1 is pushed onto the stack.
+            </td></tr>
+            <tr>
+            <td>OP_2-OP_16
+            </td>
+            <td>82-96
+            </td>
+            <td>0x52-0x60
+            </td>
+            <td>Nothing.
+            </td>
+            <td>2-16
+            </td>
+            <td>The number in the word name (2-16) is pushed onto the stack.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Flow_control">Flow control</span></h3>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_NOP
+            </td>
+            <td>97
+            </td>
+            <td>0x61
+            </td>
+            <td>Nothing
+            </td>
+            <td>Nothing
+            </td>
+            <td>Does nothing.
+            </td></tr>
+            <tr>
+            <td>OP_IF
+            </td>
+            <td>99
+            </td>
+            <td>0x63
+            </td>
+            <td colspan="2">&lt;expression&gt; if [statements] [else [statements]]* endif
+            </td>
+            <td>If the top stack value is not False, the statements are executed. The top stack value is removed.
+            </td></tr>
+            <tr>
+            <td>OP_NOTIF
+            </td>
+            <td>100
+            </td>
+            <td>0x64
+            </td>
+            <td colspan="2">&lt;expression&gt; notif [statements] [else [statements]]* endif
+            </td>
+            <td>If the top stack value is False, the statements are executed. The top stack value is removed.
+            </td></tr>
+            <tr>
+            <td>OP_ELSE
+            </td>
+            <td>103
+            </td>
+            <td>0x67
+            </td>
+            <td colspan="2">&lt;expression&gt; if [statements] [else [statements]]* endif
+            </td>
+            <td>If the preceding OP_IF or OP_NOTIF or OP_ELSE was not executed then these statements are and if the preceding OP_IF or OP_NOTIF or OP_ELSE was executed then these statements are not.
+            </td></tr>
+            <tr>
+            <td>OP_ENDIF
+            </td>
+            <td>104
+            </td>
+            <td>0x68
+            </td>
+            <td colspan="2">&lt;expression&gt; if [statements] [else [statements]]* endif
+            </td>
+            <td>Ends an if/else block. All blocks must end, or the transaction is <b>invalid</b>. An OP_ENDIF without OP_IF earlier is also <b>invalid</b>.
+            </td></tr>
+            <tr>
+            <td>OP_VERIFY
+            </td>
+            <td>105
+            </td>
+            <td>0x69
+            </td>
+            <td>True / false
+            </td>
+            <td>Nothing / <i>fail</i>
+            </td>
+            <td><b>Marks transaction as invalid</b> if top stack value is not true. The top stack value is removed.
+            </td></tr>
+            <tr>
+            <td><a href="/wiki/OP_RETURN" title="OP RETURN">OP_RETURN</a>
+            </td>
+            <td>106
+            </td>
+            <td>0x6a
+            </td>
+            <td>Nothing
+            </td>
+            <td><i>fail</i>
+            </td>
+            <td><b>Marks transaction as invalid</b>. A standard way of attaching extra data to transactions is to add a zero-value output with a scriptPubKey consisting of OP_RETURN followed by exactly one pushdata op. Such outputs are provably unspendable, reducing their cost to the network. Currently it is usually considered non-standard (though valid) for a transaction to have more than one OP_RETURN output or an OP_RETURN output with more than one pushdata op.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Stack">Stack</span></h3>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_TOALTSTACK
+            </td>
+            <td>107
+            </td>
+            <td>0x6b
+            </td>
+            <td>x1
+            </td>
+            <td>(alt)x1
+            </td>
+            <td>Puts the input onto the top of the alt stack. Removes it from the main stack.
+            </td></tr>
+            <tr>
+            <td>OP_FROMALTSTACK
+            </td>
+            <td>108
+            </td>
+            <td>0x6c
+            </td>
+            <td>(alt)x1
+            </td>
+            <td>x1
+            </td>
+            <td>Puts the input onto the top of the main stack. Removes it from the alt stack.
+            </td></tr>
+            <tr>
+            <td>OP_IFDUP
+            </td>
+            <td>115
+            </td>
+            <td>0x73
+            </td>
+            <td>x
+            </td>
+            <td>x / x x
+            </td>
+            <td>If the top stack value is not 0, duplicate it.
+            </td></tr>
+            <tr>
+            <td>OP_DEPTH
+            </td>
+            <td>116
+            </td>
+            <td>0x74
+            </td>
+            <td>Nothing
+            </td>
+            <td>&lt;Stack size&gt;
+            </td>
+            <td>Puts the number of stack items onto the stack.
+            </td></tr>
+            <tr>
+            <td>OP_DROP
+            </td>
+            <td>117
+            </td>
+            <td>0x75
+            </td>
+            <td>x
+            </td>
+            <td>Nothing
+            </td>
+            <td>Removes the top stack item.
+            </td></tr>
+            <tr>
+            <td>OP_DUP
+            </td>
+            <td>118
+            </td>
+            <td>0x76
+            </td>
+            <td>x
+            </td>
+            <td>x x
+            </td>
+            <td>Duplicates the top stack item.
+            </td></tr>
+            <tr>
+            <td>OP_NIP
+            </td>
+            <td>119
+            </td>
+            <td>0x77
+            </td>
+            <td>x1 x2
+            </td>
+            <td>x2
+            </td>
+            <td>Removes the second-to-top stack item.
+            </td></tr>
+            <tr>
+            <td>OP_OVER
+            </td>
+            <td>120
+            </td>
+            <td>0x78
+            </td>
+            <td>x1 x2
+            </td>
+            <td>x1 x2 x1
+            </td>
+            <td>Copies the second-to-top stack item to the top.
+            </td></tr>
+            <tr>
+            <td>OP_PICK
+            </td>
+            <td>121
+            </td>
+            <td>0x79
+            </td>
+            <td>xn ... x2 x1 x0 &lt;n&gt;
+            </td>
+            <td>xn ... x2 x1 x0 xn
+            </td>
+            <td>The item <i>n</i> back in the stack is copied to the top.
+            </td></tr>
+            <tr>
+            <td>OP_ROLL
+            </td>
+            <td>122
+            </td>
+            <td>0x7a
+            </td>
+            <td>xn ... x2 x1 x0 &lt;n&gt;
+            </td>
+            <td>... x2 x1 x0 xn
+            </td>
+            <td>The item <i>n</i> back in the stack is moved to the top.
+            </td></tr>
+            <tr>
+            <td>OP_ROT
+            </td>
+            <td>123
+            </td>
+            <td>0x7b
+            </td>
+            <td>x1 x2 x3
+            </td>
+            <td>x2 x3 x1
+            </td>
+            <td>The top three items on the stack are rotated to the left.
+            </td></tr>
+            <tr>
+            <td>OP_SWAP
+            </td>
+            <td>124
+            </td>
+            <td>0x7c
+            </td>
+            <td>x1 x2
+            </td>
+            <td>x2 x1
+            </td>
+            <td>The top two items on the stack are swapped.
+            </td></tr>
+            <tr>
+            <td>OP_TUCK
+            </td>
+            <td>125
+            </td>
+            <td>0x7d
+            </td>
+            <td>x1 x2
+            </td>
+            <td>x2 x1 x2
+            </td>
+            <td>The item at the top of the stack is copied and inserted before the second-to-top item.
+            </td></tr>
+            <tr>
+            <td>OP_2DROP
+            </td>
+            <td>109
+            </td>
+            <td>0x6d
+            </td>
+            <td>x1 x2
+            </td>
+            <td>Nothing
+            </td>
+            <td>Removes the top two stack items.
+            </td></tr>
+            <tr>
+            <td>OP_2DUP
+            </td>
+            <td>110
+            </td>
+            <td>0x6e
+            </td>
+            <td>x1 x2
+            </td>
+            <td>x1 x2 x1 x2
+            </td>
+            <td>Duplicates the top two stack items.
+            </td></tr>
+            <tr>
+            <td>OP_3DUP
+            </td>
+            <td>111
+            </td>
+            <td>0x6f
+            </td>
+            <td>x1 x2 x3
+            </td>
+            <td>x1 x2 x3 x1 x2 x3
+            </td>
+            <td>Duplicates the top three stack items.
+            </td></tr>
+            <tr>
+            <td>OP_2OVER
+            </td>
+            <td>112
+            </td>
+            <td>0x70
+            </td>
+            <td>x1 x2 x3 x4
+            </td>
+            <td>x1 x2 x3 x4 x1 x2
+            </td>
+            <td>Copies the pair of items two spaces back in the stack to the front.
+            </td></tr>
+            <tr>
+            <td>OP_2ROT
+            </td>
+            <td>113
+            </td>
+            <td>0x71
+            </td>
+            <td>x1 x2 x3 x4 x5 x6
+            </td>
+            <td>x3 x4 x5 x6 x1 x2
+            </td>
+            <td>The fifth and sixth items back are moved to the top of the stack.
+            </td></tr>
+            <tr>
+            <td>OP_2SWAP
+            </td>
+            <td>114
+            </td>
+            <td>0x72
+            </td>
+            <td>x1 x2 x3 x4
+            </td>
+            <td>x3 x4 x1 x2
+            </td>
+            <td>Swaps the top two pairs of items.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Splice">Splice</span></h3>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_CAT
+            </td>
+            <td>126
+            </td>
+            <td>0x7e
+            </td>
+            <td>x1 x2
+            </td>
+            <td>out
+            </td>
+            <td>Concatenates two strings.
+            </td></tr>
+            <tr>
+            <td>OP_SUBSTR
+            </td>
+            <td>127
+            </td>
+            <td>0x7f
+            </td>
+            <td>in begin size
+            </td>
+            <td>out
+            </td>
+            <td>Returns a section of a string.
+            </td></tr>
+            <tr>
+            <td>OP_LEFT
+            </td>
+            <td>128
+            </td>
+            <td>0x80
+            </td>
+            <td>in size
+            </td>
+            <td>out
+            </td>
+            <td>Keeps only characters left of the specified point in a string.
+            </td></tr>
+            <tr>
+            <td>OP_RIGHT
+            </td>
+            <td>129
+            </td>
+            <td>0x81
+            </td>
+            <td>in size
+            </td>
+            <td>out
+            </td>
+            <td>Keeps only characters right of the specified point in a string.
+            </td></tr>
+            <tr>
+            <td>OP_SIZE
+            </td>
+            <td>130
+            </td>
+            <td>0x82
+            </td>
+            <td>in
+            </td>
+            <td>in size
+            </td>
+            <td>Pushes the string length of the top element of the stack (without popping it).
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Bitwise_logic">Bitwise logic</span></h3>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_INVERT
+            </td>
+            <td>131
+            </td>
+            <td>0x83
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td>Flips all of the bits in the input.
+            </td></tr>
+            <tr>
+            <td>OP_AND
+            </td>
+            <td>132
+            </td>
+            <td>0x84
+            </td>
+            <td>x1 x2
+            </td>
+            <td>out
+            </td>
+            <td>Boolean <i>and</i> between each bit in the inputs.
+            </td></tr>
+            <tr>
+            <td>OP_OR
+            </td>
+            <td>133
+            </td>
+            <td>0x85
+            </td>
+            <td>x1 x2
+            </td>
+            <td>out
+            </td>
+            <td>Boolean <i>or</i> between each bit in the inputs.
+            </td></tr>
+            <tr>
+            <td>OP_XOR
+            </td>
+            <td>134
+            </td>
+            <td>0x86
+            </td>
+            <td>x1 x2
+            </td>
+            <td>out
+            </td>
+            <td>Boolean <i>exclusive or</i> between each bit in the inputs.
+            </td></tr>
+            <tr>
+            <td>OP_EQUAL
+            </td>
+            <td>135
+            </td>
+            <td>0x87
+            </td>
+            <td>x1 x2
+            </td>
+            <td>True / false
+            </td>
+            <td>Returns 1 if the inputs are exactly equal, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_EQUALVERIFY
+            </td>
+            <td>136
+            </td>
+            <td>0x88
+            </td>
+            <td>x1 x2
+            </td>
+            <td>Nothing / <i>fail</i>
+            </td>
+            <td>Same as OP_EQUAL, but runs OP_VERIFY afterward.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Arithmetic">Arithmetic</span></h3>
+            <p>Note: Arithmetic inputs are limited to signed 32-bit integers, but may overflow their output.
+            </p><p>If any input value for any of these commands is longer than 4 bytes, the script must abort and fail.
+            </p>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_1ADD
+            </td>
+            <td>139
+            </td>
+            <td>0x8b
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td>1 is added to the input.
+            </td></tr>
+            <tr>
+            <td>OP_1SUB
+            </td>
+            <td>140
+            </td>
+            <td>0x8c
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td>1 is subtracted from the input.
+            </td></tr>
+            <tr>
+            <td>OP_2MUL
+            </td>
+            <td>141
+            </td>
+            <td>0x8d
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td style="background:#D97171;">The input is multiplied by 2. <i>disabled.</i>
+            </td></tr>
+            <tr>
+            <td>OP_2DIV
+            </td>
+            <td>142
+            </td>
+            <td>0x8e
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td style="background:#D97171;">The input is divided by 2. <i>disabled.</i>
+            </td></tr>
+            <tr>
+            <td>OP_NEGATE
+            </td>
+            <td>143
+            </td>
+            <td>0x8f
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td>The sign of the input is flipped.
+            </td></tr>
+            <tr>
+            <td>OP_ABS
+            </td>
+            <td>144
+            </td>
+            <td>0x90
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td>The input is made positive.
+            </td></tr>
+            <tr>
+            <td>OP_NOT
+            </td>
+            <td>145
+            </td>
+            <td>0x91
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td>If the input is 0 or 1, it is flipped. Otherwise the output will be 0.
+            </td></tr>
+            <tr>
+            <td>OP_0NOTEQUAL
+            </td>
+            <td>146
+            </td>
+            <td>0x92
+            </td>
+            <td>in
+            </td>
+            <td>out
+            </td>
+            <td>Returns 0 if the input is 0. 1 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_ADD
+            </td>
+            <td>147
+            </td>
+            <td>0x93
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>a is added to b.
+            </td></tr>
+            <tr>
+            <td>OP_SUB
+            </td>
+            <td>148
+            </td>
+            <td>0x94
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>b is subtracted from a.
+            </td></tr>
+            <tr>
+            <td>OP_MUL
+            </td>
+            <td>149
+            </td>
+            <td>0x95
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>a is multiplied by b.
+            </td></tr>
+            <tr>
+            <td>OP_DIV
+            </td>
+            <td>150
+            </td>
+            <td>0x96
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>a is divided by b.
+            </td></tr>
+            <tr>
+            <td>OP_MOD
+            </td>
+            <td>151
+            </td>
+            <td>0x97
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns the remainder after dividing a by b.
+            </td></tr>
+            <tr>
+            <td>OP_LSHIFT
+            </td>
+            <td>152
+            </td>
+            <td>0x98
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Shifts a left b bits, preserving sign.
+            </td></tr>
+            <tr>
+            <td>OP_RSHIFT
+            </td>
+            <td>153
+            </td>
+            <td>0x99
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Shifts a right b bits, preserving sign.
+            </td></tr>
+            <tr>
+            <td>OP_BOOLAND
+            </td>
+            <td>154
+            </td>
+            <td>0x9a
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>If both a and b are not "" (null string), the output is 1. Otherwise 0.
+            </td></tr>
+            <tr>
+            <td>OP_BOOLOR
+            </td>
+            <td>155
+            </td>
+            <td>0x9b
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>If a or b is not "" (null string), the output is 1. Otherwise 0.
+            </td></tr>
+            <tr>
+            <td>OP_NUMEQUAL
+            </td>
+            <td>156
+            </td>
+            <td>0x9c
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns 1 if the numbers are equal, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_NUMEQUALVERIFY
+            </td>
+            <td>157
+            </td>
+            <td>0x9d
+            </td>
+            <td>a b
+            </td>
+            <td>Nothing / <i>fail</i>
+            </td>
+            <td>Same as OP_NUMEQUAL, but runs OP_VERIFY afterward.
+            </td></tr>
+            <tr>
+            <td>OP_NUMNOTEQUAL
+            </td>
+            <td>158
+            </td>
+            <td>0x9e
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns 1 if the numbers are not equal, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_LESSTHAN
+            </td>
+            <td>159
+            </td>
+            <td>0x9f
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns 1 if a is less than b, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_GREATERTHAN
+            </td>
+            <td>160
+            </td>
+            <td>0xa0
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns 1 if a is greater than b, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_LESSTHANOREQUAL
+            </td>
+            <td>161
+            </td>
+            <td>0xa1
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns 1 if a is less than or equal to b, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_GREATERTHANOREQUAL
+            </td>
+            <td>162
+            </td>
+            <td>0xa2
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns 1 if a is greater than or equal to b, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_MIN
+            </td>
+            <td>163
+            </td>
+            <td>0xa3
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns the smaller of a and b.
+            </td></tr>
+            <tr>
+            <td>OP_MAX
+            </td>
+            <td>164
+            </td>
+            <td>0xa4
+            </td>
+            <td>a b
+            </td>
+            <td>out
+            </td>
+            <td>Returns the larger of a and b.
+            </td></tr>
+            <tr>
+            <td>OP_WITHIN
+            </td>
+            <td>165
+            </td>
+            <td>0xa5
+            </td>
+            <td>x min max
+            </td>
+            <td>out
+            </td>
+            <td>Returns 1 if x is within the specified range (left-inclusive), 0 otherwise.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Crypto">Crypto</span></h3>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_RIPEMD160
+            </td>
+            <td>166
+            </td>
+            <td>0xa6
+            </td>
+            <td>in
+            </td>
+            <td>hash
+            </td>
+            <td>The input is hashed using RIPEMD-160.
+            </td></tr>
+            <tr>
+            <td>OP_SHA1
+            </td>
+            <td>167
+            </td>
+            <td>0xa7
+            </td>
+            <td>in
+            </td>
+            <td>hash
+            </td>
+            <td>The input is hashed using SHA-1.
+            </td></tr>
+            <tr>
+            <td>OP_SHA256
+            </td>
+            <td>168
+            </td>
+            <td>0xa8
+            </td>
+            <td>in
+            </td>
+            <td>hash
+            </td>
+            <td>The input is hashed using SHA-256.
+            </td></tr>
+            <tr>
+            <td>OP_HASH160
+            </td>
+            <td>169
+            </td>
+            <td>0xa9
+            </td>
+            <td>in
+            </td>
+            <td>hash
+            </td>
+            <td>The input is hashed twice: first with SHA-256 and then with RIPEMD-160.
+            </td></tr>
+            <tr>
+            <td>OP_HASH256
+            </td>
+            <td>170
+            </td>
+            <td>0xaa
+            </td>
+            <td>in
+            </td>
+            <td>hash
+            </td>
+            <td>The input is hashed two times with SHA-256.
+            </td></tr>
+            <tr>
+            <td>OP_CODESEPARATOR
+            </td>
+            <td>171
+            </td>
+            <td>0xab
+            </td>
+            <td>Nothing
+            </td>
+            <td>Nothing
+            </td>
+            <td>All of the signature checking words will only match signatures to the data after the most recently-executed OP_CODESEPARATOR.
+            </td></tr>
+            <tr>
+            <td><a href="/wiki/OP_CHECKSIG" title="OP CHECKSIG">OP_CHECKSIG</a>
+            </td>
+            <td>172
+            </td>
+            <td>0xac
+            </td>
+            <td>sig pubkey
+            </td>
+            <td>True / false
+            </td>
+            <td>The entire transaction's outputs, inputs, and script (from the most recently-executed OP_CODESEPARATOR to the end) are hashed. The signature used by OP_CHECKSIG must be a valid signature for this hash and public key. If it is, 1 is returned, 0 otherwise.
+            </td></tr>
+            <tr>
+            <td>OP_CHECKSIGVERIFY
+            </td>
+            <td>173
+            </td>
+            <td>0xad
+            </td>
+            <td>sig pubkey
+            </td>
+            <td>Nothing / <i>fail</i>
+            </td>
+            <td>Same as OP_CHECKSIG, but OP_VERIFY is executed afterward.
+            </td></tr>
+            <tr>
+            <td>OP_CHECKMULTISIG
+            </td>
+            <td>174
+            </td>
+            <td>0xae
+            </td>
+            <td>x sig1 sig2 ... &lt;number of signatures&gt; pub1 pub2 &lt;number of public keys&gt;
+            </td>
+            <td>True / False
+            </td>
+            <td>Compares the first signature against each public key until it finds an ECDSA match. Starting with the subsequent public key, it compares the second signature against each remaining public key until it finds an ECDSA match. The process is repeated until all signatures have been checked or not enough public keys remain to produce a successful result. All signatures need to match a public key. Because public keys are not checked again if they fail any signature comparison, signatures must be placed in the scriptSig using the same order as their corresponding public keys were placed in the scriptPubKey or redeemScript. If all signatures are valid, 1 is returned, 0 otherwise. Due to a bug, one extra unused value is removed from the stack.
+            </td></tr>
+            <tr>
+            <td>OP_CHECKMULTISIGVERIFY
+            </td>
+            <td>175
+            </td>
+            <td>0xaf
+            </td>
+            <td>x sig1 sig2 ... &lt;number of signatures&gt; pub1 pub2 ... &lt;number of public keys&gt;
+            </td>
+            <td>Nothing / <i>fail</i>
+            </td>
+            <td>Same as OP_CHECKMULTISIG, but OP_VERIFY is executed afterward.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Locktime">Locktime</span></h3>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Input
+            </th>
+            <th>Output
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_CHECKLOCKTIMEVERIFY (previously OP_NOP2)
+            </td>
+            <td>177
+            </td>
+            <td>0xb1
+            </td>
+            <td>x
+            </td>
+            <td>x / <i>fail</i>
+            </td>
+            <td><b>Marks transaction as invalid</b> if the top stack item is greater than the transaction's nLockTime field, otherwise script evaluation continues as though an OP_NOP was executed. Transaction is also invalid if 1. the stack is empty; or 2. the top stack item is negative; or 3. the top stack item is greater than or equal to 500000000 while the transaction's nLockTime field is less than 500000000, or vice versa; or 4. the input's nSequence field is equal to 0xffffffff. The precise semantics are described in <a rel="nofollow" class="external text" href="https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki">BIP 0065</a>.
+            </td></tr>
+            <tr>
+            <td>OP_CHECKSEQUENCEVERIFY (previously OP_NOP3)
+            </td>
+            <td>178
+            </td>
+            <td>0xb2
+            </td>
+            <td>x
+            </td>
+            <td>x / <i>fail</i>
+            </td>
+            <td><b>Marks transaction as invalid</b> if the relative lock time of the input (enforced by <a rel="nofollow" class="external text" href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki">BIP 0068</a> with nSequence) is not equal to or longer than the value of the top stack item. The precise semantics are described in <a rel="nofollow" class="external text" href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki">BIP 0112</a>.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Pseudo-words">Pseudo-words</span></h3>
+            <p>These words are used internally for assisting with transaction matching. They are invalid if used in actual scripts.
+            </p>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>Description
+            </th></tr>
+            <tr>
+            <td>OP_PUBKEYHASH
+            </td>
+            <td>253
+            </td>
+            <td>0xfd
+            </td>
+            <td>Represents a public key hashed with OP_HASH160.
+            </td></tr>
+            <tr>
+            <td>OP_PUBKEY
+            </td>
+            <td>254
+            </td>
+            <td>0xfe
+            </td>
+            <td>Represents a public key compatible with OP_CHECKSIG.
+            </td></tr>
+            <tr>
+            <td>OP_INVALIDOPCODE
+            </td>
+            <td>255
+            </td>
+            <td>0xff
+            </td>
+            <td>Matches any opcode that is not yet assigned.
+            </td></tr></table>
+            <h3><span class="mw-headline" id="Reserved_words">Reserved words</span></h3>
+            <p>Any opcode not assigned is also reserved. Using an unassigned opcode makes the transaction <b>invalid</b>.
+            </p>
+            <table class="wikitable">
+            <tr>
+            <th>Word
+            </th>
+            <th>Opcode
+            </th>
+            <th>Hex
+            </th>
+            <th>When used...
+            </th></tr>
+            <tr>
+            <td>OP_RESERVED
+            </td>
+            <td>80
+            </td>
+            <td>0x50
+            </td>
+            <td><b>Transaction is invalid</b> unless occuring in an unexecuted OP_IF branch
+            </td></tr>
+            <tr>
+            <td>OP_VER
+            </td>
+            <td>98
+            </td>
+            <td>0x62
+            </td>
+            <td><b>Transaction is invalid</b> unless occuring in an unexecuted OP_IF branch
+            </td></tr>
+            <tr>
+            <td>OP_VERIF
+            </td>
+            <td>101
+            </td>
+            <td>0x65
+            </td>
+            <td><b>Transaction is invalid even when occuring in an unexecuted OP_IF branch</b>
+            </td></tr>
+            <tr>
+            <td>OP_VERNOTIF
+            </td>
+            <td>102
+            </td>
+            <td>0x66
+            </td>
+            <td><b>Transaction is invalid even when occuring in an unexecuted OP_IF branch</b>
+            </td></tr>
+            <tr>
+            <td>OP_RESERVED1
+            </td>
+            <td>137
+            </td>
+            <td>0x89
+            </td>
+            <td><b>Transaction is invalid</b> unless occuring in an unexecuted OP_IF branch
+            </td></tr>
+            <tr>
+            <td>OP_RESERVED2
+            </td>
+            <td>138
+            </td>
+            <td>0x8a
+            </td>
+            <td><b>Transaction is invalid</b> unless occuring in an unexecuted OP_IF branch
+            </td></tr>
+            <tr>
+            <td>OP_NOP1, OP_NOP4-OP_NOP10
+            </td>
+            <td>176, 179-185
+            </td>
+            <td>0xb0, 0xb3-0xb9
+            </td>
+            <td>The word is ignored. Does not mark transaction as invalid.
+            </td></tr></table>
+            
+          </div>
+        </div>
+      </main>
+      <aside class="aside-menu">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">
+              <i class="icon-list"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+              <i class="icon-speech"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
+              <i class="icon-settings"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- Tab panes-->
+        <!-- <div class="tab-content">
+          <div class="tab-pane active" id="timeline" role="tabpanel">
+            <div class="list-group list-group-accent">
+              <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
+              <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
+                <div class="avatar float-right">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div>Meeting with
+                  <strong>Lucas</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  1 - 3pm</small>
+                <small class="text-muted">
+                  <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-info">
+                <div class="avatar float-right">
+                  <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div>Skype with
+                  <strong>Megan</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  4 - 5pm</small>
+                <small class="text-muted">
+                  <i class="icon-social-skype"></i>  On-line</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Tomorrow</div>
+              <div class="list-group-item list-group-item-accent-danger list-group-item-divider">
+                <div>New UI Project -
+                  <strong>deadline</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  10 - 11pm</small>
+                <small class="text-muted">
+                  <i class="icon-home"></i>  creativeLabs HQ</small>
+                <div class="avatars-stack mt-2">
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-accent-success list-group-item-divider">
+                <div>
+                  <strong>#10 Startups.Garden</strong> Meetup</div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  1 - 3pm</small>
+                <small class="text-muted">
+                  <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
+                <div>
+                  <strong>Team meeting</strong>
+                </div>
+                <small class="text-muted mr-3">
+                  <i class="icon-calendar"></i>  4 - 6pm</small>
+                <small class="text-muted">
+                  <i class="icon-home"></i>  creativeLabs HQ</small>
+                <div class="avatars-stack mt-2">
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img class="img-avatar" src="img/avatars/8.jpg" alt="admin@bootstrapmaster.com">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane p-3" id="messages" role="tabpanel">
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </div>
+              </div>
+              <div>
+                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted float-right mt-1">1:52 PM</small>
+              </div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+          </div>
+          <div class="tab-pane p-3" id="settings" role="tabpanel">
+            <h6>Settings</h6>
+            <div class="aside-options">
+              <div class="clearfix mt-4">
+                <small>
+                  <b>Option 1</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox" checked="">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+              <div>
+                <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+              </div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3">
+                <small>
+                  <b>Option 2</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+              <div>
+                <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+              </div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3">
+                <small>
+                  <b>Option 3</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3">
+                <small>
+                  <b>Option 4</b>
+                </small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox" checked="">
+                  <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+            </div>
+            <hr>
+            <h6>System Utilization</h6>
+            <div class="text-uppercase mb-1 mt-4">
+              <small>
+                <b>CPU Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">348 Processes. 1/4 Cores.</small>
+            <div class="text-uppercase mb-1 mt-2">
+              <small>
+                <b>Memory Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">11444GB/16384MB</small>
+            <div class="text-uppercase mb-1 mt-2">
+              <small>
+                <b>SSD 1 Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">243GB/256GB</small>
+            <div class="text-uppercase mb-1 mt-2">
+              <small>
+                <b>SSD 2 Usage</b>
+              </small>
+            </div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">25GB/256GB</small>
+          </div>
+        </div> -->
+      </aside>
+    </div>
+    <footer class="app-footer">
+      <div>
+        <a href="https://github.com/dfoderick">dfoderick github</a>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="https://coreui.io">CoreUI</a>
+      </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+  </body>
+</html>
