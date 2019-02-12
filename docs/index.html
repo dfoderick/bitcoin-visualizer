@@ -18,10 +18,10 @@
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Full Cycle - Bitcoin Visualizer</title>
     <!-- Icons-->
-    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
-    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="dist/coreui-icons.min.css" rel="stylesheet">
+    <link href="dist/flag-icon.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet"> -->
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
@@ -123,31 +123,61 @@
                 <div class="card">
                   <div class="card-header">Script Visualizer</div>
                   <div class="card-body">
-                    <!-- /.row-->
 
                     <div class="card">
                       <div class="card-header"><i class="fa fa-file-download fa-lg mt-4"></i>Load Transaction</div>
                       <div class="card-body">
-                        <input type="text" id="txtTxid" class="col-md-8"
-                        placeholder="Enter TxId"
-                        ></input>
-                        <button id="btnLoadTx">Load Tx</button>
+                        <div class="row pb-3">
+                          <input type="text" id="txtTxid" class="col-md-8 mr-3"
+                          placeholder="Enter TxId" value="95fa8f460851d7ad175e2e05711519cf796d77ff22ec346029ffabe9056cf04b"
+                          ></input>
+                          <button id="btnLoadTx" class="mr-3">Load Tx</button>
+                          <button id="btnExploreTx" class="mr-3">Show in Explorer</button>
+                        </div>
+                        <div class="row">
+                          <label class="col-md-1">vin</label>
+                          <select class="col-md-2" id="vin"></select>
+                          <!-- <label class="col-md-1">vout</label>
+                          <select class="col-md-2" id="vout"></select> -->
+                        </div>
                       </div>
                     </div>
   
                     <div class="card">
-                      <div class="card-header"><i class="fa fa-unlock fa-lg mt-4"></i>Unlock Script (aka ScriptSig from Transaction Input vin)</div>
+                      <div class="card-header">
+                        <i class="fa fa-unlock fa-lg mt-4"></i>
+                        <span>Unlock Script (aka ScriptSig from Transaction Input vin)</span>
+                        <button class="btn btn-primary float-md-right" type="button" data-toggle="collapse" data-target="#hexUnlock">
+                          Hex
+                        </button>
+                      </div>
                       <div class="card-body">
                         <textarea id="txtUnlock" class="colspan=12 w-100">OP_1 OP_2 OP_MUL</textarea>
+                      </div>
+                      <div class="collapse" id="hexUnlock">
+                        <div class="card-body">
+                          <textarea id="txtUnlockHex" class="colspan=12 w-100"></textarea>
+                        </div>
                       </div>
                     </div>
 
                     <div class="card">
-                      <div class="card-header"><i class="fa fa-lock fa-lg mt-4"></i>Locking Script (aka ScriptPubKey from Transaction Output vout)</div>
+                      <div class="card-header">
+                        <i class="fa fa-lock fa-lg mt-4"></i>
+                        <span>Locking Script (aka ScriptPubKey from Transaction Output vout)</span>
+                        <button class="btn btn-primary float-md-right" type="button" data-toggle="collapse" data-target="#hexLock">
+                            Hex
+                          </button>
+                        </div>
                       <div class="card-body">
                         <textarea id="txtLock" class="colspan=12 w-100">OP_2 OP_EQUAL</textarea>
                       </div>
-                    </div>
+                        <div class="collapse" id="hexLock">
+                          <div class="card-body">
+                            <textarea id="txtLockHex" class="colspan=12 w-100"></textarea>
+                          </div>
+                        </div>
+                      </div>
 
                     <div class="pb-3">
                       <button id="scriptRun">Run Script</button>
@@ -194,12 +224,12 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="dist/bootstrap.min.js"></script>
+    <script src="dist/pace.min.js"></script>
     <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <script src="dist/coreui.min.js"></script>
     <!-- Plugins and scripts required by this view-->
-    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="js/charts.js"></script>
     <script src="node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -209,23 +239,80 @@
           runScript()
         })
 
+        $('#btnExploreTx').click( (clk) => {
+          let txid = $('#txtTxid').val()
+          if (txid) {
+            window.open(`https://bchsvexplorer.com/tx/${txid}`)
+          }
+        })
+
+        $('#txtLock').change(() => {
+          let scriptLock = bsv.Script($('#txtLock').val())
+          $('#txtLockHex').val(scriptLock.toBuffer().toString('hex'))
+        })
+
+        $('#txtUnlock').change(() => {
+          let scriptLock = bsv.Script($('#txtUnlock').val())
+          $('#txtUnlockHex').val(scriptLock.toBuffer().toString('hex'))
+        })
+
+        let thisTransaction = null
+        let otherTransaction = null
+
         $('#btnLoadTx').click( (clk) => {
           let txid = $('#txtTxid').val()
           if (txid) {
             rawtx(txid).then( unlockingTx => {
-              let utx = unlockingTx.data
-              console.log(utx)
-              let selectedVin = utx.vin[0]
-              console.log(selectedVin)
-              $('#txtUnlock').val(selectedVin.scriptSig.asm)
-              rawtx(selectedVin.txid).then( lockingTx => {
-                $('#txtLock').val(lockingTx.data.vout[selectedVin.vout].scriptPubKey.asm)
-                runScript()
+              thisTransaction = unlockingTx.data
+              console.log(thisTransaction)
+              thisTransaction.vin.forEach( i => {
+                $('#vin').append($("<option/>",{value: i.vout, text: `${i.vout}:${i.txid}`}))
               })
+              whenVinSelected(0)
+              // thisTransaction.vout.forEach( i => {
+              //   $('#vout').append($("<option/>",{value: i.n, text: i.value}))
+              // })
             })
           }
         })
+
+        $('#vin').change( () => {
+          whenVinSelected(parseInt($('#vin').val(),10))
+        })
+
+        // $('#vout').change( () => {
+        //   whenVoutSelected(parseInt($('#vout').val(),10))
+        // })
+
+        const whenVinSelected = (vinIndex) => {
+          let selectedVin = thisTransaction.vin[vinIndex]
+          console.log(selectedVin)
+          let scriptUnlock = bsv.Script.fromHex(selectedVin.scriptSig.hex)
+          $('#txtUnlock').val(scriptUnlock.toString())
+          $('#txtUnlockHex').val(selectedVin.scriptSig.hex)
+          rawtx(selectedVin.txid).then( lockingTx => {
+            otherTransaction = lockingTx.data
+            let scriptLock = bsv.Script.fromHex(lockingTx.data.vout[selectedVin.vout].scriptPubKey.hex)
+            $('#txtLock').val(scriptLock.toString())
+            $('#txtLockHex').val(lockingTx.data.vout[selectedVin.vout].scriptPubKey.hex)
+            runScript()
+          })
+        }
       })
+
+      // const whenVoutSelected = (voutIndex) => {
+      //   let selectedVout = thisTransaction.vin[vinIndex]
+      //   console.log(selectedVout)
+      //   let scriptLock = bsv.Script.fromHex(selectedVout.scriptPubKey.hex)
+      //   $('#txtLock').val(scriptLock.toString())
+      //   rawtx(selectedVin.txid).then( lockingTx => {
+      //     otherTransaction = lockingTx.data
+      //     let scriptLock = bsv.Script.fromHex(lockingTx.data.vout[selectedVin.vout].scriptPubKey.hex)
+      //     //$('#txtLock').val(lockingTx.data.vout[selectedVin.vout].scriptPubKey.asm)
+      //     $('#txtLock').val(scriptLock.toString())
+      //     runScript()
+      //   })
+      // }
 
       const rawtx = async (tx) => {
         if (!tx) {
