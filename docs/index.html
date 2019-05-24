@@ -29,6 +29,10 @@
       .grid-striped .row:nth-of-type(odd) {
           background-color: rgba(0,0,0,.05);
       }
+      .spanIndent {
+        display: inline-block;
+        width: 15px;
+      }
     </style>
 
     <script src='https://unpkg.com/bsv@0.24.3/bsv.min.js'></script>
@@ -177,11 +181,18 @@
                             <textarea id="txtLockHex" class="colspan=12 w-100"></textarea>
                           </div>
                         </div>
-                      </div>
+                    </div>
 
                     <div class="pb-3">
-                      <button id="scriptRun">Run Script</button>
-                    </div>
+                      <div class="row">
+                        <span class="col-md-3">
+                          <button id="scriptRun">Run Script</button>
+                        </span>
+                        <span class="col-md-3"><input id="chkCleanStack" type="checkbox">Clean Stack</span>
+                        <span class="col-md-3">Sig Ops Count<input id="confSigOps" type="number"></span>
+                        <span class="col-md-3">Script Size<input id="confSize" type="number"></span>
+                      </div>
+                  </div>
 
                     <div class="card">
                       <div class="card-header">
@@ -234,6 +245,10 @@
     <script src="js/main.js"></script>
 
     <script>
+
+      let thisTransaction = null
+      let otherTransaction = null
+
       document.addEventListener("DOMContentLoaded", function(e) {
         $('#scriptRun').click( (clk) => {
           runScript()
@@ -256,16 +271,20 @@
           $('#txtUnlockHex').val(scriptLock.toBuffer().toString('hex'))
         })
 
-        let thisTransaction = null
-        let otherTransaction = null
+        $('#txtUnlockHex').change(() => {
+          let script = bsv.Script($('#txtUnlockHex').val())
+          $('#txtUnlock').val(script.toString())
+        })
 
         $('#btnLoadTx').click( (clk) => {
           let txid = $('#txtTxid').val()
           if (txid) {
+            $('#vin').empty()
             rawtx(txid).then( unlockingTx => {
               thisTransaction = unlockingTx.data
               console.log(thisTransaction)
               thisTransaction.vin.forEach( i => {
+                console.log(i)
                 $('#vin').append($("<option/>",{value: i.vout, text: `${i.vout}:${i.txid}`}))
               })
               whenVinSelected(0)
@@ -295,7 +314,7 @@
             let scriptLock = bsv.Script.fromHex(lockingTx.data.vout[selectedVin.vout].scriptPubKey.hex)
             $('#txtLock').val(scriptLock.toString())
             $('#txtLockHex').val(lockingTx.data.vout[selectedVin.vout].scriptPubKey.hex)
-            runScript()
+            runScript(vinIndex)
           })
         }
       })
@@ -327,20 +346,41 @@
         }
       }
 
-      function runScript() {
+      function runScript(ninIndex) {
         initRun()
           try {
             const unlock = $('#txtUnlock').val()
-            const sunlock = bsv.Script(unlock)
+            let sunlock = bsv.Script(unlock)
             const lock = $('#txtLock').val()
-            const slock = bsv.Script(lock)
+            let slock = bsv.Script(lock)
             const si = bsv.Script.Interpreter()
             si.stepListener = function (step, stack, altstack) {
               showStep(step, stack, altstack)
             }
             //function (scriptSig, scriptPubkey, tx, nin, flags, satoshisBN)
-            const verified = si.verify(sunlock, slock, null, null, bsv.Script.Interpreter.SCRIPT_VERIFY_P2SH |
-              bsv.Script.Interpreter.SCRIPT_ENABLE_MAGNETIC_OPCODES | bsv.Script.Interpreter.SCRIPT_ENABLE_MONOLITH_OPCODES)
+            let nin = ninIndex || 0
+            console.log(`nin ${nin}`)
+            let amt = null
+            let tx = null
+            //the other transaction is the one that has the vouts that we need to validate
+            if (otherTransaction) {
+              tx = new bsv.Transaction(otherTransaction.hex)
+              console.log(tx)
+              amt = tx.outputs[nin].satoshisBN
+              slock = tx.outputs[nin].script
+              console.log(amt.toString())
+            }
+            let flags = bsv.Script.Interpreter.SCRIPT_VERIFY_P2SH |
+              bsv.Script.Interpreter.SCRIPT_ENABLE_MAGNETIC_OPCODES | 
+              bsv.Script.Interpreter.SCRIPT_ENABLE_MONOLITH_OPCODES
+            const chkCleanStack = $('#chkCleanStack').val()
+            if (chkCleanStack === "on") {
+              console.log(chkCleanStack)
+              flags = flags | bsv.Script.Interpreter.SCRIPT_CLEAN_STACK
+            }
+            // unlock should be from this tx
+            // lock should be from other tx
+            const verified = si.verify(sunlock, slock, tx, nin, flags, amt)
             showResults({si: si, verified: verified, error: si.errstr})
           }
           catch (err) {
@@ -379,7 +419,8 @@
         let stackTop = '>'
         let renderStack = ''
         for (let item in stack.reverse()) {
-          renderStack+=`<div>${stackTop}${stack[item].toString('hex')}</div>`
+          const stackValue = stack[item].toString('hex') || '00'
+          renderStack+=`<div><span class='spanIndent'>${stackTop}</span><span>${stackValue}</span></div>`
           stackTop = ' '
         }
         return renderStack
